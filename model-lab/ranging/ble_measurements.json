@@ -1,0 +1,14 @@
+{
+  "experiment":"same-position repeat, raw BLE advertiser/scanner",
+  "advertiser":"MJPVXCSG9HYL65YL",
+  "scanner":"10BCAC2HM5000CR",
+  "serviceUuid":"0000f4b0-0000-1000-8000-00805f9b34fb",
+  "peerAddressObserved":"FC:2A:46:06:40:FE",
+  "runs":[
+    {"run":1,"sampleCount":30,"minRssi":-46,"maxRssi":-43,"meanRssi":-45.5,"medianRssi":-46,"stddevRssi":1.118033988749895},
+    {"run":2,"sampleCount":30,"minRssi":-46,"maxRssi":-43,"meanRssi":-45.3,"medianRssi":-46,"stddevRssi":1.2688577540449517}
+  ],
+  "distanceMeters":null,
+  "direction":null,
+  "notes":"No physical separation label was assigned; RSSI was not converted to metres."
+}

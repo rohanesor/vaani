@@ -1,0 +1,223 @@
+{
+  "artifact_name": "iTANTRA LAP1 Canonical Ten-Language Test APK v2",
+  "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
+  "sha256": "7a947cdb39974f8148cb9d32ef9431d367af926ffbc9693acc2532b781bb7c06",
+  "size_bytes": 1187389113,
+  "package": "com.vokie",
+  "version": "1.0.0",
+  "version_code": 1,
+  "abi": [
+    "arm64-v8a"
+  ],
+  "source_git_commit": "7589e0faaa360cd52add664af9468e15b4398e1a",
+  "build_timestamp": "2026-09-12T20:19:15.050467700Z (filesystem mtime; build timestamp not independently embedded)",
+  "build_variant": "debug",
+  "build_flag": "-PbundleAllTtsModels=true",
+  "model_inventory": {
+    "eng": {
+      "language": "English",
+      "model": {
+        "filename": "assets/models/tts/eng/model.onnx",
+        "size_bytes": 114016948,
+        "sha256": "e3a198f6a4473429bab138be040e7cd40d2cab7a31b6410ff0a94d5a7fbbc254"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/eng/tokens.txt",
+        "size_bytes": 303,
+        "sha256": "dff08580748be688d9112d62d6352422c56d372dfe34b24ea3f66fa1b75cfaa9"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "hin": {
+      "language": "Hindi",
+      "model": {
+        "filename": "assets/models/tts/hin/model.onnx",
+        "size_bytes": 63145178,
+        "sha256": "8871f3e07adb6ca490f8dbcd3956a8647c53c35b5d0a1c2a8d097b3bf721a31b"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/hin/tokens.txt",
+        "size_bytes": 940,
+        "sha256": "ef3a7e4a8d1af0c9d4dc45aaae1a6242ebe24a7ed6f3d025a49eb29682784c6d"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "tam": {
+      "language": "Tamil",
+      "model": {
+        "filename": "assets/models/tts/tam/model.onnx",
+        "size_bytes": 114032312,
+        "sha256": "c86cf0a0657d57577d937b806d7b63d638cff522b5687cb650dde24bc71c5c88"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/tam/tokens.txt",
+        "size_bytes": 375,
+        "sha256": "0b3f692319bb5fae8658e2f84bf252bca92450d0207bbba7273caa1a182d81b8"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "guj": {
+      "language": "Gujarati",
+      "model": {
+        "filename": "assets/models/tts/guj/model.onnx",
+        "size_bytes": 114033848,
+        "sha256": "59f073b2e63771dd7d7972c17577e05a903ae6f4aa8c65a6dc1d9eb1a9812ed2"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/guj/tokens.txt",
+        "size_bytes": 402,
+        "sha256": "2d855f2affb7586cc6be095a4382eb0bee2a22242deda32c86aab6b1a810d8c4"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "mar": {
+      "language": "Marathi",
+      "model": {
+        "filename": "assets/models/tts/mar/model.onnx",
+        "size_bytes": 114043832,
+        "sha256": "03021bb722e8a19a44be6bb327a441c4061a0c75cbd565f3455e64c84713f03a"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/mar/tokens.txt",
+        "size_bytes": 490,
+        "sha256": "4d968029d0754b41633cb0871cce6796a5ab3d3bc2b9b91c5721cfdf85156083"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "kan": {
+      "language": "Kannada",
+      "model": {
+        "filename": "assets/models/tts/kan/model.onnx",
+        "size_bytes": 114045368,
+        "sha256": "8b6f313ebfdf423991ab6444a4520a72cc506a5b262a5d0c0c467ed7d8555834"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/kan/tokens.txt",
+        "size_bytes": 487,
+        "sha256": "a4a44037f7492c9e5b69a4483250e54af9a2d528bd4e19de95a21ff0c5e82a8a"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "mal": {
+      "language": "Malayalam",
+      "model": {
+        "filename": "assets/models/tts/mal/model.onnx",
+        "size_bytes": 114052280,
+        "sha256": "13965d4eeed2f5198c53689e192ce7095e167fb11dd0e72ae5cd8a3bf117374b"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/mal/tokens.txt",
+        "size_bytes": 571,
+        "sha256": "3a752c36593cc519193c8caa6c00371369b423366fa6ead8d91945a28b2c46a3"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "tel": {
+      "language": "Telugu",
+      "model": {
+        "filename": "assets/models/tts/tel/model.onnx",
+        "size_bytes": 114037688,
+        "sha256": "e82525ab1e662ba96ef81346ff1943c5bb731853c1f96d02fbff2e7a0284824c"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/tel/tokens.txt",
+        "size_bytes": 435,
+        "sha256": "528152cb4121272e6e71f7a1d91c8d4922b92fae414ae599db608cb92a738bb7"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "ory": {
+      "language": "Odia",
+      "model": {
+        "filename": "assets/models/tts/ory/model.onnx",
+        "size_bytes": 114046136,
+        "sha256": "a90e1a48d4aa404c12504f47a89bbe310110a9d43dd2e093346f539efc8728a1"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/ory/tokens.txt",
+        "size_bytes": 495,
+        "sha256": "bc90e5423446ca730aef6b56a4656cb07421c7538429a50b9c396fe0758fd587"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    },
+    "ben": {
+      "language": "Bengali",
+      "model": {
+        "filename": "assets/models/tts/ben/model.onnx",
+        "size_bytes": 114044600,
+        "sha256": "d16d6ea228104876499a8b09b3417e6de0aca91e1ff04d23f5a3fc2f6ddd3ad7"
+      },
+      "tokens": {
+        "filename": "assets/models/tts/ben/tokens.txt",
+        "size_bytes": 480,
+        "sha256": "a74190ec42b8f0afb349276430c716f1b585090d8fe6d3c1d6d5fe510798a387"
+      },
+      "provenance_status": "RESEARCH / UNAPPROVED",
+      "approval_status": "RESEARCH / UNAPPROVED"
+    }
+  },
+  "stt_model": {
+    "filename": "assets/models/stt/ggml-tiny-q5_1.bin",
+    "size_bytes": 32152673,
+    "sha256": "818710568da3ca15689e31a743197b520007872ff9576237bda97bd1b469c3d7"
+  },
+  "native_libraries": [
+    {
+      "filename": "lib/arm64-v8a/libc++_shared.so",
+      "size_bytes": 1292896,
+      "sha256": "92ee8da641b969254cc8723f64aa115d36c8ffa87115e38bc9cb89e3eefee839"
+    },
+    {
+      "filename": "lib/arm64-v8a/libdatastore_shared_counter.so",
+      "size_bytes": 7112,
+      "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1"
+    },
+    {
+      "filename": "lib/arm64-v8a/libonnxruntime.so",
+      "size_bytes": 21684872,
+      "sha256": "892bde5701ea47edffb3f1cc070f5bab690fccfca40e11baaed7b252084af477"
+    },
+    {
+      "filename": "lib/arm64-v8a/libsherpa-onnx-c-api.so",
+      "size_bytes": 4456784,
+      "sha256": "6a4388a024d297e4fc5faea4229238efa069dff8a98f25030d35ca82e5f67b33"
+    },
+    {
+      "filename": "lib/arm64-v8a/libsherpa-onnx-cxx-api.so",
+      "size_bytes": 440760,
+      "sha256": "986dac2b94bf1da10112c2ce69a3f15439e5f04061d5891cf970f2eeaccb213d"
+    },
+    {
+      "filename": "lib/arm64-v8a/libsherpa-onnx-jni.so",
+      "size_bytes": 4761536,
+      "sha256": "330eca65c8ca29d2eeb545c2bfe7f73da47415f10c638ae07709ef8a6e441e91"
+    },
+    {
+      "filename": "lib/arm64-v8a/libvokie_ct2.so",
+      "size_bytes": 3922672,
+      "sha256": "15197d3bc9011abb0e6069bfe2683e6ef125dae93e594864a58248bcfbb75d83"
+    },
+    {
+      "filename": "lib/arm64-v8a/libvokie_whisper.so",
+      "size_bytes": 1337912,
+      "sha256": "0da2c597cd1f2cd1d888225dc4947d73569d84d5ed2464ef34df80eedf45f5e8"
+    }
+  ],
+  "ct2_translation_model": "NOT BUNDLED; runtime-staged under app-private files/ct2/nllb600m",
+  "licensing_provenance_status": "RESEARCH / UNAPPROVED; provenance and redistribution authorization incomplete",
+  "previous_canonical_sha256": "6db754dde7248a2cb88db3e094d278210f7ebcb71159b8ef821fe1f6b0cbeda8",
+  "previous_artifact": "UNRECOVERABLE",
+  "previous_recovery_status": "BLOCKED",
+  "new_canonical_sha256": "7a947cdb39974f8148cb9d32ef9431d367af926ffbc9693acc2532b781bb7c06",
+  "byte_identity_with_previous": "NOT_ESTABLISHED",
+  "reproducible_from_old_artifact": "NOT PASS"
+}

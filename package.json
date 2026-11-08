@@ -1,0 +1,30 @@
+{
+  "name": "vaani",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VAANI — AI-native multilingual communication. Every language. One conversation.",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix client run typecheck",
+    "ui:harness": "npm --prefix server exec tsx test/e2e-server.ts",
+    "test:web": "npm --prefix client test",
+    "test:android": "node tests/android/run.mjs",
+    "test:gnani": "npm --prefix server test -- --run test/ai.test.ts",
+    "test:gnani:live": "node scripts/gnani-live-smoke.mjs",
+    "test:all": "npm run test:gnani && npm run test:web && npm run test:android",
+    "launch:preview": "remotion studio launch/remotion/src/index.ts",
+    "launch:render:draft": "remotion render launch/remotion/src/index.ts VaaniLaunchLandscape launch/exports/vaani-launch-draft.mp4"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.410",
+    "@remotion/player": "^4.0.410",
+    "appium": "^3.9.0",
+    "remotion": "^4.0.410",
+    "webdriverio": "^9.21.0"
+  }
+}

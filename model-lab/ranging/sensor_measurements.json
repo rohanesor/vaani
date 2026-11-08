@@ -1,0 +1,5 @@
+{
+  "phone_a":{"availability":{"accelerometer":true,"gyroscope":true,"magnetometer":true,"rotation_vector":true,"game_rotation_vector":true,"gravity":true,"linear_acceleration":true},"rawSamples":null},
+  "phone_b":{"availability":{"accelerometer":true,"gyroscope":true,"magnetometer":true,"rotation_vector":true,"game_rotation_vector":true,"gravity":true,"linear_acceleration":true},"rawSamples":null},
+  "notes":"Availability measured; synchronized raw sensor sampling was not performed."
+}

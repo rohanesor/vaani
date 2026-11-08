@@ -1,0 +1,6 @@
+{
+  "phone_a":{"wifiRttHardware":false,"wifiRttManager":false,"status":"UNSUPPORTED_OR_UNAVAILABLE","peerRanging":"NOT_TESTED"},
+  "phone_b":{"wifiRttHardware":false,"wifiRttManager":false,"status":"UNSUPPORTED_OR_UNAVAILABLE","peerRanging":"NOT_TESTED"},
+  "distanceMeters":null,
+  "notes":"Neither device exposed android.hardware.wifi.rtt or WifiRttManager. No RTT request was made."
+}

@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.2090, 28.6139] },
+      "properties": { "id": "shelter-1", "name": "Central Shelter", "type": "shelter", "details": "Capacity 200" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.2273, 28.6352] },
+      "properties": { "id": "hospital-1", "name": "Emergency Hospital", "type": "hospital", "details": "24h trauma care" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.1850, 28.6000] },
+      "properties": { "id": "hazard-1", "name": "Flooding Zone", "type": "hazard", "details": "Avoid during monsoon" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.2500, 28.6200] },
+      "properties": { "id": "water-1", "name": "Relief Water Point", "type": "water", "details": "Potable water" }
+    }
+  ]
+}

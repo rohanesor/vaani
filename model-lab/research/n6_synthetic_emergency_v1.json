@@ -1,0 +1,32 @@
+{
+  "name": "N6 synthetic hand-authored emergency utterances v1",
+  "license": "CC0-1.0",
+  "source": "Hand-authored solely for the N6 packet-erasure benchmark; not clinical data and not human translations.",
+  "annotation": "Hand-labelled benchmark-equivalent N5 v1 fields. Telugu is intentionally absent because N5's extractor has no Telugu terms.",
+  "utterances": [
+    {"id":"en1","language":"English","text":"There is a fire in the building. Send help.","category":"FIRE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["FIRE","STRUCTURAL"],"victim_count":null},
+    {"id":"en2","language":"English","text":"One person is injured and needs a doctor.","category":"MEDICAL","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":1},
+    {"id":"en3","language":"English","text":"Three people are trapped after an accident.","category":"TRAPPED","urgency":"CRITICAL","severity":"CRITICAL","hazards":["VEHICLE"],"victim_count":3},
+    {"id":"en4","language":"English","text":"Gas leak, please send assistance immediately.","category":"REQUEST_ASSISTANCE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["GAS"],"victim_count":null},
+    {"id":"en5","language":"English","text":"Smoke and electrical wires are dangerous.","category":"UNKNOWN","urgency":"UNKNOWN","severity":"UNKNOWN","hazards":["SMOKE","ELECTRICAL"],"victim_count":null},
+    {"id":"en6","language":"English","text":"There is no fire here. Please send help.","category":"REQUEST_ASSISTANCE","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":null},
+    {"id":"hi1","language":"Hindi","text":"इमारत में आग है, तुरंत मदद चाहिए।","category":"FIRE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["FIRE","STRUCTURAL"],"victim_count":null},
+    {"id":"hi2","language":"Hindi","text":"एक व्यक्ति घायल है, डॉक्टर चाहिए।","category":"MEDICAL","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":1},
+    {"id":"hi3","language":"Hindi","text":"तीन लोग फंसे हैं।","category":"TRAPPED","urgency":"CRITICAL","severity":"CRITICAL","hazards":[],"victim_count":3},
+    {"id":"hi4","language":"Hindi","text":"गैस रिसाव है, मदद भेजो।","category":"REQUEST_ASSISTANCE","urgency":"URGENT","severity":"HIGH","hazards":["GAS"],"victim_count":null},
+    {"id":"hi5","language":"Hindi","text":"पानी बढ़ रहा है, सहायता चाहिए।","category":"FLOOD","urgency":"URGENT","severity":"HIGH","hazards":["WATER"],"victim_count":null},
+    {"id":"hi6","language":"Hindi","text":"दुर्घटना हुई है और वाहन रास्ता रोक रहा है।","category":"ACCIDENT","urgency":"URGENT","severity":"HIGH","hazards":["VEHICLE"],"victim_count":null},
+    {"id":"ta1","language":"Tamil","text":"கட்டிடத்தில் தீ உள்ளது, உதவி வேண்டும்.","category":"FIRE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["FIRE","STRUCTURAL"],"victim_count":null},
+    {"id":"ta2","language":"Tamil","text":"ஒரு நபர் காயம், மருத்துவர் வேண்டும்.","category":"MEDICAL","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":1},
+    {"id":"ta3","language":"Tamil","text":"மூன்று பேர் சிக்கி உள்ளனர்.","category":"TRAPPED","urgency":"CRITICAL","severity":"CRITICAL","hazards":[],"victim_count":3},
+    {"id":"ta4","language":"Tamil","text":"புகை மற்றும் மின்சார கம்பி ஆபத்து.","category":"UNKNOWN","urgency":"UNKNOWN","severity":"UNKNOWN","hazards":["SMOKE","ELECTRICAL"],"victim_count":null},
+    {"id":"ta5","language":"Tamil","text":"தண்ணீர் அதிகரிக்கிறது, உதவி வேண்டும்.","category":"FLOOD","urgency":"URGENT","severity":"HIGH","hazards":["WATER"],"victim_count":null},
+    {"id":"ta6","language":"Tamil","text":"விபத்து நடந்தது, வாகனம் சிக்கியுள்ளது.","category":"ACCIDENT","urgency":"URGENT","severity":"HIGH","hazards":["VEHICLE"],"victim_count":null},
+    {"id":"mixhi1","language":"Hindi+English","text":"mujhe doctor chahiye please","category":"MEDICAL","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":null},
+    {"id":"mixhi2","language":"Hindi+English","text":"आग है, emergency help चाहिए","category":"FIRE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["FIRE"],"victim_count":null},
+    {"id":"mixhi3","language":"Hindi+English","text":"तीन लोग trapped हैं","category":"TRAPPED","urgency":"CRITICAL","severity":"CRITICAL","hazards":[],"victim_count":3},
+    {"id":"mixta1","language":"Tamil+English","text":"enakku doctor venum","category":"MEDICAL","urgency":"URGENT","severity":"HIGH","hazards":[],"victim_count":null},
+    {"id":"mixta2","language":"Tamil+English","text":"fire irukku, help வேண்டும்","category":"FIRE","urgency":"CRITICAL","severity":"CRITICAL","hazards":["FIRE"],"victim_count":null},
+    {"id":"mixta3","language":"Tamil+English","text":"மூன்று பேர் trapped உள்ளனர்","category":"TRAPPED","urgency":"CRITICAL","severity":"CRITICAL","hazards":[],"victim_count":3}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "samples": [
+    {
+      "sampleId": "EN-sample01",
+      "language": "EN",
+      "durationMs": 1340,
+      "sampleRateHz": 16000,
+      "channels": 1,
+      "encoding": "PCM_S16LE",
+      "speakerIdHash": "ca0822b29e705cec3688909f0d4e73fa1ba53e446aa15939190286687561200b",
+      "sha256": "311e24ddedab8eea46d022fa83b8c7363ff25f849b0fe22d120cb66c9d3d0b8d",
+      "device": "realme RMX3782",
+      "recordingDate": "2026-08-30",
+      "environment": "not recorded by operator",
+      "rms": 1839.91,
+      "peak": 10566,
+      "clipped": false
+    },
+    {
+      "sampleId": "HI-sample01",
+      "language": "HI",
+      "durationMs": 1560,
+      "sampleRateHz": 16000,
+      "channels": 1,
+      "encoding": "PCM_S16LE",
+      "speakerIdHash": "ca0822b29e705cec3688909f0d4e73fa1ba53e446aa15939190286687561200b",
+      "sha256": "611e98cbc4bad0338535c27282fc0b0cf3a2a901a0c778589ea08eb01dc76bd9",
+      "device": "realme RMX3782",
+      "recordingDate": "2026-08-30",
+      "environment": "not recorded by operator",
+      "rms": 1384.90,
+      "peak": 9394,
+      "clipped": false
+    },
+    {
+      "sampleId": "TA-sample01",
+      "language": "TA",
+      "durationMs": 1940,
+      "sampleRateHz": 16000,
+      "channels": 1,
+      "encoding": "PCM_S16LE",
+      "speakerIdHash": "ca0822b29e705cec3688909f0d4e73fa1ba53e446aa15939190286687561200b",
+      "sha256": "f968cd9520e97bf328ab5b63936e4ba5e58caf0670c56f300511d0fbad1903cd",
+      "device": "realme RMX3782",
+      "recordingDate": "2026-08-30",
+      "environment": "not recorded by operator",
+      "rms": 1472.85,
+      "peak": 6327,
+      "clipped": false
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "benchmark": "N6 Level-1 Application-Layer Semantic Priority Erasure Coding",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [GCC 13.3.0]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "seed": 42,
+  "samples_per_system_condition": 1000,
+  "dataset_path": "model-lab/research/n6_synthetic_emergency_v1.json",
+  "dataset_sha256": "3d77aea9faf612fea8b99bafc919a377978eeb153f29bf9b85354bb064133fc2",
+  "dataset_count": 24,
+  "language_distribution": {
+    "English": 6,
+    "Hindi": 6,
+    "Hindi+English": 3,
+    "Tamil": 6,
+    "Tamil+English": 3
+  },
+  "telugu": "NOT EVALUATED: no Telugu utterances and actual N5 extractor has no Telugu terms",
+  "text_packet_payload_bytes": 32,
+  "n5_mapping": "SemanticMetadata v1 is seven bytes: version, category ordinal, urgency ordinal, severity ordinal, hazard bitset, victimCount (0=unspecified), certainty ordinal. This Python benchmark models it as an atomic 7-byte semantic payload; it does not import Kotlin or demonstrate PacketV2 wire compatibility.",
+  "systems": {
+    "A": "text chunks only",
+    "B": "systematic K=4 data packets plus one XOR parity (N=5); a block recovers iff no more than one data packet is erased and parity is present when needed",
+    "C": "semantic-first atomic 7-byte payload replicated R=1,2,3; unprotected 32-byte text chunks follow"
+  },
+  "independent_loss_levels": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "burst_models": {
+    "mild": {
+      "good_loss": 0.01,
+      "good_to_bad": 0.08,
+      "bad_to_good": 0.12,
+      "bad_loss": 0.4,
+      "stationary_bad": 0.4,
+      "expected_bad_run_packets": 8.333333333333334,
+      "expected_loss": 0.16600000000000004
+    },
+    "moderate": {
+      "good_loss": 0.01,
+      "good_to_bad": 0.08,
+      "bad_to_good": 0.12,
+      "bad_loss": 0.7,
+      "stationary_bad": 0.4,
+      "expected_bad_run_packets": 8.333333333333334,
+      "expected_loss": 0.286
+    },
+    "severe": {
+      "good_loss": 0.01,
+      "good_to_bad": 0.08,
+      "bad_to_good": 0.12,
+      "bad_loss": 0.95,
+      "stationary_bad": 0.4,
+      "expected_bad_run_packets": 8.333333333333334,
+      "expected_loss": 0.386
+    }
+  },
+  "git_commit": "4a654c833a527799c0dc2ec2745569e2c100c858",
+  "timestamp_utc": "2026-09-10T16:40:36Z"
+}

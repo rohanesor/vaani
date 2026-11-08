@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "samples": [
+    {
+      "sampleId": "EN-sample01",
+      "language": "EN",
+      "durationMs": 0,
+      "sampleRateHz": 16000,
+      "channels": 1,
+      "encoding": "PCM_S16LE",
+      "speakerIdHash": "SHA-256 pseudonym only; never raw identity",
+      "sha256": "SHA-256 of private PCM file",
+      "device": "realme RMX3782",
+      "recordingDate": "YYYY-MM-DD",
+      "environment": "brief non-identifying technical description",
+      "rms": 0,
+      "peak": 0,
+      "clipped": false
+    }
+  ]
+}

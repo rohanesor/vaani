@@ -1,0 +1,29 @@
+{
+  "dataset": "ai4bharat/indicvoices_r",
+  "datasetRevision": "5f4495c91d500742a58d1be2ab07d77f73c0acf8",
+  "requestedRepositoryRevision": "4d77d8a402b680fb739c1a6a3ec531de0cf17139",
+  "revisionResolution": "The requested value is an AI4Bharat GitHub repository revision. Hugging Face rejects it as an invalid dataset revision; this official dataset repository currently exposes 5f4495c91d500742a58d1be2ab07d77f73c0acf8.",
+  "retrievedAtUtc": "2026-08-29T19:47:30Z",
+  "metadataSources": [
+    "https://huggingface.co/api/datasets/ai4bharat/indicvoices_r?blobs=true",
+    "https://huggingface.co/datasets/ai4bharat/indicvoices_r/resolve/5f4495c91d500742a58d1be2ab07d77f73c0acf8/README.md"
+  ],
+  "accessMethod": "Public metadata/card endpoint; no Hugging Face token was present in this execution environment. Dataset Viewer endpoints returned HTTP 401 without authentication. No audio/parquet shard was downloaded.",
+  "license": "CC-BY-4.0",
+  "schema": ["text", "lang", "samples", "verbatim", "normalized", "speaker_id", "scenario", "task_name", "gender", "age_group", "job_type", "qualification", "area", "district", "state", "occupation", "audio", "utterance_pitch_mean", "utterance_pitch_std", "snr", "c50", "speaking_rate", "cer", "duration"],
+  "audio": {"format": "WAV", "sampleRateHz": 48000},
+  "languages": [
+    {"language":"hi","config":"Hindi","lfsShardCount":101,"downloadBytes":47225888374,"datasetBytes":49887750096,"trainUtterances":26318,"testUtterances":376,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"gu","config":"Gujarati","lfsShardCount":7,"downloadBytes":2889359875,"datasetBytes":3135427471,"trainUtterances":1129,"testUtterances":662,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"mr","config":"Marathi","lfsShardCount":65,"downloadBytes":31434459154,"datasetBytes":31901616178,"trainUtterances":18776,"testUtterances":365,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"kn","config":"Kannada","lfsShardCount":63,"downloadBytes":27604791540,"datasetBytes":30857555313,"trainUtterances":16986,"testUtterances":342,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"ml","config":"Malayalam","lfsShardCount":117,"downloadBytes":52034095360,"datasetBytes":57934544649,"trainUtterances":31106,"testUtterances":397,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"ta","config":"Tamil","lfsShardCount":138,"downloadBytes":63139582505,"datasetBytes":68638259943,"trainUtterances":39292,"testUtterances":293,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"te","config":"Telugu","lfsShardCount":187,"downloadBytes":86122150914,"datasetBytes":93076541141,"trainUtterances":47208,"testUtterances":339,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"or","config":"Odia","lfsShardCount":98,"downloadBytes":44466622775,"datasetBytes":48234964828,"trainUtterances":25202,"testUtterances":363,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"},
+    {"language":"bn","config":"Bengali","lfsShardCount":157,"downloadBytes":72237562604,"datasetBytes":77538948626,"trainUtterances":39904,"testUtterances":288,"speakers":"UNKNOWN","genderDistribution":"UNKNOWN","duration":"UNKNOWN"}
+  ],
+  "requiredLanguageDownloadBytes": 427154513101,
+  "requiredLanguageDatasetBytes": 459801045245,
+  "integrity": "Official HF API exposes SHA-256 per LFS parquet shard. Shard hashes are not duplicated here; retrieve the pinned API file index in an authenticated audit before acquisition."
+}

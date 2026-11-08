@@ -1,0 +1,92 @@
+# Node/web build and local runtime state
+node_modules/
+dist/
+client/node_modules/.tmp/
+client/test-results/
+client/playwright-report/
+tests/android/reports/
+launch/recordings/*
+!launch/recordings/.gitkeep
+launch/exports/*
+!launch/exports/.gitkeep
+launch/generated-assets/*
+!launch/generated-assets/.gitkeep
+server/data/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+!.env.example
+*.log
+
+# API key files (never committed)
+*api key*.txt
+*api-key*.txt
+*apikey*.txt
+*secret*.txt
+
+# Local Android/Gradle state
+.gradle/
+local.properties
+build/
+app/build/
+app/.cxx/
+*.iml
+.idea/
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local speech models and private archive workspaces are never committed.
+# Reviewed manifests remain versioned; do not ignore application source or lockfiles.
+data/*
+!data/manifests/
+!data/manifests/**
+.research/
+/models/
+model-lab/models/
+.model-audit/
+.quantization-candidates/
+*.ggml
+*.gguf
+ggml-*.bin
+app/src/main/assets/models/
+*.onnx
+vits-mms-*.tar.bz2
+*.vokie-tts-model.zip
+vokie-models-*.tar.zst
+vokie-models-*.sha256
+app/src/main/assets/tts-models/
+
+# Physical-device logs, captured audio, and UI inspection artifacts.
+device-metrics/
+[0-9][0-9]_*.png
+phoneA-distance-validation.json
+iTantra emergency communication app-handoff/
+model-lab/bench/out/
+model-lab/msvc_crt/
+model-lab/reproduction/
+scratch/
+corpus/audio/
+*.wav
+
+# Signing keys and credentials
+*.jks
+*.keystore
+*.pem
+*.p12
+google-services.json
+
+# Build artifacts
+*.apk
+*.aab
+
+# Large model artifacts
+*.bin
+*.pt
+*.pth
+*.safetensors

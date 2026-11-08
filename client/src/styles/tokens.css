@@ -1,0 +1,142 @@
+/*
+ * VAANI design tokens — the only place raw colours live. See docs/DESIGN_SYSTEM.md.
+ * Theme is resolved to data-theme="light" | "dark" on <html> before first paint (index.html + session.tsx).
+ * Three identities, three hues:  Peacock = communication/brand · Iris = AI · Marigold = voice.
+ */
+:root {
+  /* ---------- type ---------- */
+  --font-ui: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Kannada',
+    'Noto Sans Malayalam', 'Noto Sans Bengali', 'Noto Sans Gujarati', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-editorial: 'Fraunces Variable', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Kannada',
+    'Noto Sans Malayalam', 'Noto Sans Bengali', 'Noto Sans Gujarati', Georgia, serif;
+
+  --type-display: 560 2.25rem/1.1 var(--font-editorial);
+  --type-title: 560 1.375rem/1.25 var(--font-editorial);
+  --type-heading: 650 1rem/1.35 var(--font-ui);
+  --type-body: 450 0.9375rem/1.55 var(--font-ui);
+  --type-message: 450 1rem/1.6 var(--font-ui);          /* generous leading: Indic conjuncts + vowel signs */
+  --type-caption: 500 0.8125rem/1.45 var(--font-ui);
+  --type-label: 700 0.6875rem/1.3 var(--font-ui);        /* small caps labels: letter-spacing .08em, uppercase */
+  --type-meta: 500 0.75rem/1.3 var(--font-ui);
+
+  /* ---------- space · radius · depth · motion ---------- */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px;
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-pill: 999px;
+  --radius-turn: 14px;      /* a speaker turn in the transcript */
+  --radius-stage: 22px;     /* composer + voice stage */
+  --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 320ms;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --tap: 44px;
+  --index-w: 340px; --pane-w: 392px; --reading-w: 720px;
+
+  /* ---------- LIGHT ---------- */
+  color-scheme: light;
+  /* neutrals — warm paper, never pure black/white for large areas */
+  --color-bg: #F3F1EB;
+  --color-bg-secondary: #ECE9E1;
+  --color-surface: #FAF9F5;
+  --color-surface-elevated: #FFFEFA;
+  --color-surface-conversation: #FBFAF6;
+  --color-surface-input: #F0EDE5;
+  --color-surface-self: #E8F1EE;
+  --color-surface-hover: #EDEAE2;
+  --color-surface-selected: #E1EEEA;
+  --color-text-primary: #1A1915;
+  --color-text-secondary: #55524A;
+  --color-text-muted: #6B665C;
+  --color-text-inverse: #FBFAF6;
+  --color-border: #DCD8CE;
+  --color-border-strong: #C4BEB1;
+  --color-divider: #E5E1D8;
+  --color-disabled-bg: #E8E5DD;
+  --color-disabled-fg: #9A958A;
+
+  /* identities */
+  --color-brand-primary: #0B6E63;   /* Peacock */
+  --color-brand-hover: #08594F;
+  --color-brand-soft: #DCEEEA;
+  --color-brand-text: #0A5C53;      /* Peacock as text on light surfaces */
+  --color-on-brand: #FFFFFF;
+  --color-brand-secondary: #1F2A5C; /* Ink */
+  --color-ai-primary: #5646C8;      /* Iris */
+  --color-ai-text: #4A3BB5;
+  --color-ai-soft: #EFEDFC;
+  --color-ai-line: #B8AFEF;
+  --color-voice-primary: #965D00;   /* Marigold */
+  --color-voice-text: #8A5500;
+  --color-voice-soft: #FAEEDA;
+  --color-voice-line: #E2B46A;
+  --color-voice-live: #C47A06;      /* live waveform bars (graphic, ≥3:1) */
+
+  /* semantic states (each also carries an icon/word in the UI) */
+  --color-success: #1A7240; --color-success-soft: #DDF1E4;
+  --color-warning: #875800; --color-warning-soft: #FAEED2;
+  --color-error: #B42323;   --color-error-soft: #FBE4E1;
+  --color-info: #1F5FB0;    --color-info-soft: #E2ECF9;
+  --color-pending: #6B665C;
+  --color-offline: #55524A; --color-offline-soft: #E6E3DB;
+  --color-reconnecting: #875800; --color-reconnecting-soft: #FAEED2;
+
+  --color-focus: #1F5FB0;
+  --color-scrim: rgba(20, 19, 16, .44);
+  --shadow-1: 0 1px 2px rgba(26, 25, 21, .05);
+  --shadow-2: 0 8px 24px rgba(26, 25, 21, .08), 0 1px 3px rgba(26, 25, 21, .06);
+  --shadow-3: 0 20px 56px rgba(26, 25, 21, .18), 0 4px 12px rgba(26, 25, 21, .08);
+}
+
+/* ---------- DARK — designed, not inverted: teal-tinted charcoal so Peacock stays home ---------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0E1413;
+  --color-bg-secondary: #0A100F;
+  --color-surface: #141B1A;
+  --color-surface-elevated: #1B2423;
+  --color-surface-conversation: #111817;
+  --color-surface-input: #1A2221;
+  --color-surface-self: #12302C;
+  --color-surface-hover: #1C2625;
+  --color-surface-selected: #163833;
+  --color-text-primary: #EAE8E1;
+  --color-text-secondary: #B4B0A6;
+  --color-text-muted: #A39F94;
+  --color-text-inverse: #0E1413;
+  --color-border: #283231;
+  --color-border-strong: #3A4645;
+  --color-divider: #1F2928;
+  --color-disabled-bg: #1C2423;
+  --color-disabled-fg: #646B68;
+
+  --color-brand-primary: #4CC1B2;
+  --color-brand-hover: #67CEC1;
+  --color-brand-soft: #123631;
+  --color-brand-text: #7FD6CB;
+  --color-on-brand: #03211D;
+  --color-brand-secondary: #B9C2F2;
+  --color-ai-primary: #ACA0FF;
+  --color-ai-text: #C2B9FF;
+  --color-ai-soft: #201C42;
+  --color-ai-line: #4C438F;
+  --color-voice-primary: #F0A63E;
+  --color-voice-text: #F4B967;
+  --color-voice-soft: #33250E;
+  --color-voice-line: #75521D;
+  --color-voice-live: #F0A63E;
+
+  --color-success: #5FCB8D; --color-success-soft: #112E1D;
+  --color-warning: #EAB54E; --color-warning-soft: #32280E;
+  --color-error: #F3807A;   --color-error-soft: #381716;
+  --color-info: #82B3F2;    --color-info-soft: #13253E;
+  --color-pending: #A39F94;
+  --color-offline: #B4B0A6; --color-offline-soft: #1F2827;
+  --color-reconnecting: #EAB54E; --color-reconnecting-soft: #32280E;
+
+  --color-focus: #82B3F2;
+  --color-scrim: rgba(0, 0, 0, .62);
+  --shadow-1: 0 0 0 1px rgba(255, 255, 255, .03);
+  --shadow-2: 0 10px 28px rgba(0, 0, 0, .45);
+  --shadow-3: 0 22px 60px rgba(0, 0, 0, .6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-slow: 0ms; }
+}

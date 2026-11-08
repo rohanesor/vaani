@@ -1,0 +1,16 @@
+{
+  "series_order": [
+    "A_text_only",
+    "B_xor_fec_k4_n5",
+    "C_semantic_priority_r1",
+    "C_semantic_priority_r2",
+    "C_semantic_priority_r3"
+  ],
+  "x_axis_independent": "configured packet erasure probability 0..0.5",
+  "y_axis": "recovery probability (except packet-cost plot, normalized to its own 0..1 scale)",
+  "burst_order": [
+    "mild",
+    "moderate",
+    "severe"
+  ]
+}

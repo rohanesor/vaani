@@ -1,0 +1,38 @@
+{
+  "dataset": "IndicVoices-R",
+  "officialRepository": "https://github.com/AI4Bharat/IndicVoices-R",
+  "repositoryRevision": "4d77d8a402b680fb739c1a6a3ec531de0cf17139",
+  "revisionDate": "2024-12-11T09:56:06Z",
+  "datasetConceptRecord": "https://zenodo.org/records/11636050",
+  "zenodoVersionRecord": "https://zenodo.org/records/14016558",
+  "zenodoRelease": {
+    "version": "v1.0.2",
+    "file": "AI4Bharat/IndicVoices-R-v1.0.2.zip",
+    "sizeBytes": 310314,
+    "officialMd5": "92977e31e17f6728c8ed8c625c698be2",
+    "localVerifiedSha256": "835d1ab9940449a795a78ca949099dff9d41c0183ace35431151416cf1168798",
+    "contents": "repository snapshot and download instructions only; no audio or per-language manifests"
+  },
+  "huggingFaceDataset": {
+    "id": "ai4bharat/indicvoices_r",
+    "revision": "5f4495c91d500742a58d1be2ab07d77f73c0acf8",
+    "metadataManifest": "hf-metadata-5f4495c.json",
+    "note": "This is a distinct Hugging Face dataset revision; the GitHub repository revision is invalid as a Hugging Face revision."
+  },
+  "license": "CC-BY-4.0",
+  "licenseFile": "https://github.com/AI4Bharat/IndicVoices-R/blob/4d77d8a402b680fb739c1a6a3ec531de0cf17139/LICENSE.md",
+  "sourceIndex": "https://github.com/AI4Bharat/IndicVoices-R/blob/4d77d8a402b680fb739c1a6a3ec531de0cf17139/data_links.txt",
+  "archiveAccessResult": "Each required official object URL returned HTTP 403 AccessDenied during Phase 2G; no authentication or registration instruction is published in the pinned README or Zenodo record.",
+  "archiveChecksumStatus": "No official per-language archive checksum or size is published in the repository or Zenodo release.",
+  "slices": [
+    {"language": "hi", "name": "Hindi", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Hindi.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "gu", "name": "Gujarati", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Gujarati.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "mr", "name": "Marathi", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Marathi.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "kn", "name": "Kannada", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Kannada.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "ml", "name": "Malayalam", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Malayalam.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "ta", "name": "Tamil", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Tamil.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "te", "name": "Telugu", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Telugu.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "or", "name": "Odia", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Odia.tar.gz", "checksum": "UNKNOWN"},
+    {"language": "bn", "name": "Bengali", "archive": "https://indic-tts-public.objectstore.e2enetworks.net/data/ivr/Bengali.tar.gz", "checksum": "UNKNOWN"}
+  ]
+}

@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Private versioned S3 storage for iTantra production model archives. No public distribution origin is created.
+Parameters:
+  BucketName:
+    Type: String
+    Description: Globally unique private bucket name (for example vokie-production-models-ACCOUNT-REGION).
+Resources:
+  VokieModelsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Ref BucketName
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 }
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      OwnershipControls:
+        Rules: [{ ObjectOwnership: BucketOwnerEnforced }]
+      VersioningConfiguration: { Status: Enabled }
+Outputs:
+  ModelsBucketName:
+    Value: !Ref VokieModelsBucket
+    Description: Configure this value as the VOKIE_MODELS_BUCKET repository variable.

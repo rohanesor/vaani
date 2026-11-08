@@ -1,0 +1,66 @@
+# LAP1 Frontend File Hashes
+# Generated: 2026-09-12T16:58:21Z
+# Commit: 73563ab9c6fb9e48662034112d2d8d01a5353309
+#
+# PURPOSE: Detect accidental frontend changes during LAP2 integration
+# VERIFICATION: sha256sum -c LAP1_FRONTEND_HASHES.txt
+#
+# UI Screens and Components
+9393b75e9671a5a522160d470edd5a5fd075eb2a4f5d593ac7ce2432ee86be7b  app/src/main/java/com/vokie/ui/communication/CommunicationViewModel.kt
+ed918f3c23fc8fef4b137fcf8123562c75656089d8dc9debca83ca8c7f3430fb  app/src/main/java/com/vokie/ui/components/ConnectionStatus.kt
+190d810f6458420cdaf258f7037948d58d85999db69e9c25b76b12100be2d37b  app/src/main/java/com/vokie/ui/components/DesignPrimitives.kt
+0c72fb95b3e5c95c91c7d9ffb01f99fe609068d047f10487a585050e8d698dfd  app/src/main/java/com/vokie/ui/components/EmergencyAction.kt
+70a109c53ad0e13dca0006d55d09857d2d0c675fd4cb6e46ed8717d12c5ad5bc  app/src/main/java/com/vokie/ui/components/ITantraWordmark.kt
+11e8094f9c428fd3163375d8ecf3dacdc8d212fcfb0d95ab436812aaa705f3c5  app/src/main/java/com/vokie/ui/components/LanguagePair.kt
+6d4495f18cf07e38040b6a2c8d3970b7b105f89104ac9ece5efb465df862d08c  app/src/main/java/com/vokie/ui/components/LocationGuidanceCard.kt
+8262a23785de5851c32da9fc385628465be30dcd7ee208c78fc6a4f864a95ac8  app/src/main/java/com/vokie/ui/components/MessageBubble.kt
+7e1a3567b3183a9ceecf5c711c61c080ce7ae2b16eaaf406e6a5be20229d8e08  app/src/main/java/com/vokie/ui/components/PushToTalkButton.kt
+44108b6ffd23895aa782546a3623d4df944ebdb824c91af25770e228e1f75bf9  app/src/main/java/com/vokie/ui/components/SignalStatus.kt
+97221f7499a38ebd2f258780cb3b170a2843df0ceb7e7f6e74aef8156438ebcf  app/src/main/java/com/vokie/ui/components/StatusBadge.kt
+4520bf5f0c04326ac02f569f2aa2024a424a034594425d158fa2138f77df09f3  app/src/main/java/com/vokie/ui/components/TranslationCard.kt
+509e0c4af4a8578b319630c0f792d63495e19aee545807dcbd45f424848a1d2d  app/src/main/java/com/vokie/ui/components/VokiePanel.kt
+c63ac4d6dbbcb3ba0612e05a19322c449b39c64861029adcc1cea7ffa667bedf  app/src/main/java/com/vokie/ui/map/MapViewModel.kt
+0346b93a221183a047195dfde544dbc2226fe513dae362183c5b7a67e0adcf27  app/src/main/java/com/vokie/ui/screens/chat/ChatScreen.kt
+65e8e32a211c871a504d6b3d7567ffa4331e4b049197100f73b1ba5bdeceae0d  app/src/main/java/com/vokie/ui/screens/chat/ConnectionSheet.kt
+0d4d4e852512dabc7fac4048ba64f9b3fcacc26d140a2c8b738954a52553aa9c  app/src/main/java/com/vokie/ui/screens/chat/DesignHomeHeader.kt
+37a9f0f0257e3aae095006b598113f0301e5a7c7ea51b51a89eb79cc78174afd  app/src/main/java/com/vokie/ui/screens/chat/DesignIncomingScreen.kt
+71508cf92871fd8ed2c0ac2ac0fba974d28813c9fa7c2de942168cef01a132b7  app/src/main/java/com/vokie/ui/screens/chat/DesignListeningScreen.kt
+9d2c5a33b27ad9f3f1a76ab8b6d1de660ff9f5da2e7a68b9ac680f6aefc56f94  app/src/main/java/com/vokie/ui/screens/chat/VoiceHome.kt
+404d96ccc58c0605bac10d81ad81c7de9c1779bfac0a521e18d896a945d32d19  app/src/main/java/com/vokie/ui/screens/emergency/EmergencySheet.kt
+b7dff61092e8c4c6b82f22d427f38c4583c87494014b5ee2878bf1900ba2b9f2  app/src/main/java/com/vokie/ui/screens/locate/LocateScreen.kt
+8c57a8ff9d6813ccb2c96a28a1788e5a8c5e3f15ad84d8902b9597c37fc46245  app/src/main/java/com/vokie/ui/screens/more/MoreScreen.kt
+1b64fb874ce4d440fd572e87a7ca297363f0db6f48faf137648c1a1e4df1fa44  app/src/main/java/com/vokie/ui/screens/more/SettingsScreen.kt
+8b426be0c960e6ba0494d1046c3d09ca4bbaa49a4cc0afe2dd203926d3ad65fb  app/src/main/java/com/vokie/ui/screens/onboarding/DesignSetupFlow.kt
+efcf3df64d7185549309c87f8478e4b0afbbb69416549d50be8271a2929cfab1  app/src/main/java/com/vokie/ui/screens/onboarding/InstalledPacksDialog.kt
+b69112d040eedf745fc54de005748af9328b7e07c0dc58fd66e30a3c80ca3c66  app/src/main/java/com/vokie/ui/screens/onboarding/IntroductionScreen.kt
+1add54f802dff453ad67b58b46a0221575e38e2506828215d9ba3089e12994e0  app/src/main/java/com/vokie/ui/screens/onboarding/OnboardingScreen.kt
+93798bd2447c6e0994a7ae713b3f072edd720beb3626842b4477f6a524ec962a  app/src/main/java/com/vokie/ui/screens/rescue/RescuePeerListScreen.kt
+93abea9c14092f20db5c91d5b97f550f51d96e297147c819ec8e262e3e1f5eed  app/src/main/java/com/vokie/ui/theme/Color.kt
+d31d59fb13dde263740c01eab470b2c062a8173b3dc325e40cd2c2253b2e5b52  app/src/main/java/com/vokie/ui/theme/DesignSpec.kt
+424bbe3da615cf16e2ff2c2edeb458d8fa40b8c8a20e8cdd3c4b8c69991dae7e  app/src/main/java/com/vokie/ui/theme/Dimens.kt
+a3c0656d9707324ec154fc60d2ead6820e0b6c2048d362a45829f380d4592423  app/src/main/java/com/vokie/ui/theme/Theme.kt
+f8fb78f8543ca9be84af86bfdf66a3a76c31b4d962f53a05659759096ef36bfd  app/src/main/java/com/vokie/ui/theme/Type.kt
+c6b29d0643a68ddf48ac2cbb831577fdcffefd1c9c6e6885c2e1d89e80af9c02  app/src/main/java/com/vokie/ui/theme/VokieColors.kt
+#
+# Resources
+8292fbd4dd51a7c507654ebb1073a2defd6ce3d6836e2ee45007fe84ac5f45c4  app/src/main/res/drawable-nodpi/vokie_logo.png
+fbcf0b707e08c46d3cf623c0f5710cba5ef2a06dc3ada8bceaa7370e83b689da  app/src/main/res/drawable-nodpi/vokie_logo_adaptive.png
+dd9b622082ac55aaf5fda9a91c5f6943e26675fbdd83f6580bc51f1639e7b84b  app/src/main/res/drawable-nodpi/vokie_splash_branding.png
+3c60b9a54a6eb0384c3ffa420c57cd2b21039670dc861da21b7108d3d92b9852  app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+9ba9e2add3a5d71c34ff775bc8e6988798d74fb0aae81c83de96d733cee6c2e2  app/src/main/res/mipmap-hdpi/ic_launcher.png
+e0f4dc0b7c7b0189ddf5d7b9a7c7e29bbbd4ecd08ed145f2e7f228a48ed89fa0  app/src/main/res/mipmap-mdpi/ic_launcher.png
+a1e1d1357c46f7f49fe26f36ff6986d83364fcd549f46422240b35512ce652cb  app/src/main/res/mipmap-xhdpi/ic_launcher.png
+6a4a0b9f69feac6eda1b4d20a445d2b0a3c89983022f42ddc39ddf43eccef37d  app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+a4a0988cfb87766e80f1277d2be61e864b13bf70f616268dfb2720798d73d2ad  app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+f62ad2f032d5cbc9ad8372272c6e8ea3c973825936e7218ee2842066e39d5432  app/src/main/res/values-v31/themes.xml
+de6bf27d7ac093c6fea6e1eeda9868e6918c31430f35407c9f4f215eba15b61d  app/src/main/res/values/colors.xml
+2417a9804c5a30e993a7234e4eda7e15788862621f4094040f6af58d4fcaa81c  app/src/main/res/values/strings.xml
+0878ad15845dd4553323747ba66b614a38554bec0f4ddc94e8f9c618a8a10520  app/src/main/res/values/themes.xml
+#
+# Core Application
+0feb3f4d3aaaef3b140df1a35711e94b6e2b96636405f24813679eea2a68134a  app/src/main/java/com/vokie/MainActivity.kt
+e29652f8b9e3db2db48394b183a7b1af1cd820f147abafc3b1ef89031abb5729  app/src/main/java/com/vokie/VokieApplication.kt
+2266228979bce49090215dfed686b3a9b34ae8dac074646d6e05aa5d8244c83e  app/src/main/AndroidManifest.xml
+#
+# Build Configuration
+# (Include critical build files that should not change during integration)

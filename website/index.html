@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="iTantra — offline multilingual communication for low-bitrate links.">
+  <meta property="og:title" content="iTantra — Indian Multilingual TTS & STT Aided Neural Transceiver">
+  <meta property="og:description" content="Offline multilingual emergency communication for Android.">
+  <meta property="og:image" content="/assets/vokie-social-preview.png">
+  <meta property="og:type" content="website">
+  <title>iTantra — Offline multilingual communication</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-brand" href="/" aria-label="iTantra home"><img src="assets/vokie-logo.png" alt=""><span class="wordmark">iTantra</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#release">Release</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/rohanesor/vokie">Source code</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-logo" src="assets/vokie-logo.png" width="144" height="144" alt="Official iTantra network communication symbol">
+      <p class="hero-wordmark">iTantra</p>
+      <p class="eyebrow">OFFLINE MULTILINGUAL EMERGENCY COMMUNICATION FOR ANDROID</p>
+      <h1 id="hero-title">Offline multilingual<br><span>communication.</span></h1>
+      <p class="lead">English voice and Whisper are ready offline. Add verified language voices once on Wi-Fi, then communicate fully offline.</p>
+      <div class="hero-actions">
+        <a id="download-button" class="button button-alert" href="#release">Download iTantra</a>
+        <a class="button button-outline" href="https://github.com/rohanesor/vokie/releases">RELEASE NOTES</a>
+        <a class="button button-outline" href="https://github.com/rohanesor/vokie">SOURCE CODE</a>
+      </div>
+      <p class="availability" id="availability" role="status">Release information loads from this deployment.</p>
+    </section>
+
+    <section class="status-card" aria-label="iTantra communication status">
+      <div><span class="status-dot" aria-hidden="true"></span><strong>CORE PROCESSING</strong><small>LOCAL ON DEVICE</small></div>
+      <div><span class="status-dot" aria-hidden="true"></span><strong>INTERNET</strong><small>NOT REQUIRED AFTER INSTALL</small></div>
+      <div><span class="status-dot" aria-hidden="true"></span><strong>NO ACCOUNT</strong><small>REQUIRED</small></div>
+    </section>
+
+    <section class="section" aria-labelledby="features-title">
+      <p class="eyebrow">WHAT iTANTRA IS</p>
+      <h2 id="features-title">Built for the moment<br>ordinary networks stop.</h2>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-index">01</span><h3>OFFLINE-FIRST</h3><p>The communication foundation is designed to operate without a backend or cloud connection.</p></article>
+        <article class="feature"><span class="feature-index">02</span><h3>BLUETOOTH</h3><p>Real iTantra peer discovery, RFCOMM transport, acknowledgement, Room persistence, offline queue, retry, and duplicate protection are implemented.</p></article>
+        <article class="feature"><span class="feature-index">03</span><h3>LOCAL PROCESSING</h3><p>Offline multilingual speech recognition with Whisper and offline text-to-speech with sherpa-onnx MMS run entirely on the device. No cloud speech or TTS services.</p></article>
+        <article class="feature"><span class="feature-index">04</span><h3>LOW-END READY</h3><p>Clear controls, high contrast, and a restrained interface designed with low-memory phones in mind.</p></article>
+      </div>
+    </section>
+
+    <section id="release" class="release-panel section" aria-labelledby="release-title">
+      <div>
+        <p class="eyebrow">LATEST RELEASE</p>
+        <h2 id="release-title">No production release yet</h2>
+        <p id="release-summary">Release metadata will appear here when the first signed APK is published.</p>
+      </div>
+      <div class="release-data" id="release-data" hidden>
+        <dl>
+          <div><dt>VERSION</dt><dd id="release-version">—</dd></div>
+          <div><dt>ANDROID</dt><dd id="release-min-android">—</dd></div>
+          <div><dt>APK SIZE</dt><dd id="release-size">—</dd></div>
+          <div><dt>RELEASED</dt><dd id="release-date">—</dd></div>
+        </dl>
+        <div class="checksum"><span>SHA-256</span><code id="release-sha">—</code><button id="copy-sha" class="text-button" type="button">COPY SHA-256</button></div>
+        <a id="release-download" class="button button-alert" href="#" download>DOWNLOAD APK</a>
+      </div>
+    </section>
+
+    <section id="install" class="section install" aria-labelledby="install-title">
+      <p class="eyebrow">INSTALLATION</p>
+      <h2 id="install-title">How to install</h2>
+      <ol>
+        <li>Download the iTantra APK from this page.</li>
+        <li>Open the downloaded APK.</li>
+        <li>Allow installation from this source if Android asks.</li>
+        <li>Install and open iTantra.</li>
+        <li>Grant Nearby Devices permission when communication is initiated.</li>
+        <li>Connect to another iTantra device.</li>
+      </ol>
+      <p class="note"><strong>Offline operation:</strong> This APK includes Whisper STT and English MMS-TTS. Other verified language voices are optional one-time Wi-Fi downloads; every installed voice works without internet afterwards.</p>
+    </section>
+
+    <section class="trust section" aria-labelledby="trust-title">
+      <p class="eyebrow">TRUST</p>
+      <h2 id="trust-title">Open, local, verifiable.</h2>
+      <div class="trust-grid"><p><strong>OPEN SOURCE</strong><br>Inspect the source code and release history on GitHub.</p><p><strong>OFFLINE</strong><br>Core communication processing happens on the device.</p><p><strong>VERIFY</strong><br>Compare the displayed SHA-256 with the downloaded APK.</p></div>
+    </section>
+  </main>
+
+  <footer><span>iTantra</span><span>Offline multilingual communication for low-bitrate links.</span><a href="https://github.com/rohanesor/vokie">SOURCE CODE</a></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

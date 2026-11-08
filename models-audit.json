@@ -1,0 +1,759 @@
+{
+  "schemaVersion": 1,
+  "models": [
+    {
+      "language": "ben",
+      "path": "app/src/main/assets/models/tts/ben/model.onnx",
+      "sizeBytes": 114044600,
+      "sha256": "d16d6ea228104876499a8b09b3417e6de0aca91e1ff04d23f5a3fc2f6ddd3ad7",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113119852,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "eng",
+      "path": "app/src/main/assets/models/tts/eng/model.onnx",
+      "sizeBytes": 114016948,
+      "sha256": "e3a198f6a4473429bab138be040e7cd40d2cab7a31b6410ff0a94d5a7fbbc254",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113092204,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "guj",
+      "path": "app/src/main/assets/models/tts/guj/model.onnx",
+      "sizeBytes": 114033848,
+      "sha256": "59f073b2e63771dd7d7972c17577e05a903ae6f4aa8c65a6dc1d9eb1a9812ed2",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113109100,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "hin",
+      "path": "app/src/main/assets/models/tts/hin/model.onnx",
+      "sizeBytes": 114043064,
+      "sha256": "42c69b3611dc016ff337e994c78a76b5131156718c5a69e9cfa8912cfd850c5e",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113118316,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "kan",
+      "path": "app/src/main/assets/models/tts/kan/model.onnx",
+      "sizeBytes": 114045368,
+      "sha256": "8b6f313ebfdf423991ab6444a4520a72cc506a5b262a5d0c0c467ed7d8555834",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113120620,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "mal",
+      "path": "app/src/main/assets/models/tts/mal/model.onnx",
+      "sizeBytes": 114052280,
+      "sha256": "13965d4eeed2f5198c53689e192ce7095e167fb11dd0e72ae5cd8a3bf117374b",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113127532,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "mar",
+      "path": "app/src/main/assets/models/tts/mar/model.onnx",
+      "sizeBytes": 114043832,
+      "sha256": "03021bb722e8a19a44be6bb327a441c4061a0c75cbd565f3455e64c84713f03a",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113119084,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "ory",
+      "path": "app/src/main/assets/models/tts/ory/model.onnx",
+      "sizeBytes": 114046136,
+      "sha256": "a90e1a48d4aa404c12504f47a89bbe310110a9d43dd2e093346f539efc8728a1",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113121388,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "tam",
+      "path": "app/src/main/assets/models/tts/tam/model.onnx",
+      "sizeBytes": 114032312,
+      "sha256": "c86cf0a0657d57577d937b806d7b63d638cff522b5687cb650dde24bc71c5c88",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113107564,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    },
+    {
+      "language": "tel",
+      "path": "app/src/main/assets/models/tts/tel/model.onnx",
+      "sizeBytes": 114037688,
+      "sha256": "e82525ab1e662ba96ef81346ff1943c5bb731853c1f96d02fbff2e7a0284824c",
+      "opsets": [
+        {
+          "domain": "ai.onnx",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            "L"
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "noise_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "length_scale",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        },
+        {
+          "name": "noise_scale_w",
+          "dtype": "FLOAT",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            1,
+            "L"
+          ]
+        }
+      ],
+      "initializerCount": 460,
+      "initializerDataTypes": {
+        "FLOAT": 460
+      },
+      "initializerRawBytes": 113112940,
+      "weights": {
+        "fp32": true,
+        "fp16": false,
+        "int8": false
+      },
+      "duplicateInitializerPayloads": 0,
+      "duplicateLanguageModels": [],
+      "trainingArtifactsPackaged": false,
+      "onnxCheckerValid": true
+    }
+  ],
+  "summary": {
+    "modelCount": 10,
+    "totalTtsBytes": 1140396076
+  }
+}

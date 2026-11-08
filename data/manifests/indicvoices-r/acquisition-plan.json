@@ -1,0 +1,59 @@
+{
+  "status": "PLANNING_ONLY",
+  "trainingGate": "BLOCKED",
+  "audioAcquired": false,
+  "dataset": "ai4bharat/indicvoices_r",
+  "revision": "5f4495c91d500742a58d1be2ab07d77f73c0acf8",
+  "indicLanguages": ["hi", "gu", "mr", "kn", "ml", "ta", "te", "or", "bn"],
+  "englishSource": {
+    "dataset": "LibriTTS",
+    "provider": "OpenSLR",
+    "corpus": "SLR60",
+    "license": "CC-BY-4.0",
+    "status": "conditional; no audio acquired"
+  },
+  "knownIndicCorpusBytes": 427154513101,
+  "knownUtteranceCountsAreNotDuration": true,
+  "knownGujaratiUtterances": 1791,
+  "candidateBudgets": [
+    {"hoursPerLanguage": 10, "indicHours": 90, "englishHours": 10, "totalHours": 100, "rawPcm22kHzBytes": 15876000000, "rawPcm48kHzBytes": 34560000000, "status": "fallback feasibility target"},
+    {"hoursPerLanguage": 25, "indicHours": 225, "englishHours": 25, "totalHours": 250, "rawPcm22kHzBytes": 39690000000, "rawPcm48kHzBytes": 86400000000, "status": "recommended planning target"},
+    {"hoursPerLanguage": 50, "indicHours": 450, "englishHours": 50, "totalHours": 500, "rawPcm22kHzBytes": 79380000000, "rawPcm48kHzBytes": 172800000000, "status": "later scale experiment"},
+    {"hoursPerLanguage": 100, "indicHours": 900, "englishHours": 100, "totalHours": 1000, "rawPcm22kHzBytes": 158760000000, "rawPcm48kHzBytes": 345600000000, "status": "not an initial acquisition"}
+  ],
+  "recommendation": {
+    "strategy": "speaker-balanced common-hours target",
+    "targetHoursPerLanguage": 25,
+    "fallbackHoursPerLanguage": 10,
+    "actualHoursRule": "min(target, verified usable hours of every language, including Gujarati)",
+    "why": "25 hours is a bounded first shared-student experiment; 10 hours is a smoke-test fallback. Exact availability and speaker diversity are not assumed.",
+    "gujaratiConstraint": "Gujarati is capped at 1791 source utterances before filtering and split reservation; its measured usable duration and speaker count must cap all languages for a balanced run.",
+    "speakerRule": "select speakers first with deterministic seed and per-speaker cap; reserve disjoint speakers for validation and test; do not claim balance before audit"
+  },
+  "selectionRules": {
+    "strategies": [
+      {"id":"A","name":"equal utterance count","rule":"use the smallest verified usable utterance count; not equal hours"},
+      {"id":"B","name":"equal estimated hours","rule":"use the smallest verified usable duration; duration estimates are not yet available"},
+      {"id":"C","name":"speaker-balanced multilingual","rule":"common hours plus per-speaker caps and gender/scenario/task strata where supported","preferred":true},
+      {"id":"D","name":"maximum under 2:1","rule":"maximize usable hours subject to max/min language hours <= 2; requires exact audit"}
+    ],
+    "splits": "preserve source test only after speaker-overlap audit; otherwise reserve test then validation speakers from training pool",
+    "quality": "configurable deterministic rejection rules for corruption, sample rate, silence, duration, SNR, C50, CER, transcript, duplicates, and speaker ID; thresholds require distribution and linguist review",
+    "requiredFields": ["text","normalized","lang","speaker_id","gender","duration","scenario","task_name","area","district","state","snr","c50","speaking_rate","cer"]
+  },
+  "storagePlanning": {
+    "formula": "hours * sample_rate_hz * 2 bytes for mono 16-bit PCM",
+    "reserveRecommendation": "at least 2x the raw bound for staging, validation, indexes, and transformed copies",
+    "compression": "unknown until legally approved acquisition; do not assume WAV/FLAC savings"
+  },
+  "provenance": {
+    "required": ["dataset", "revision", "source_file", "source_row_or_record_id", "source_checksum_or_etag", "language", "speaker_id", "original_text", "normalized_text", "duration", "scenario", "task_name", "gender", "regional_metadata", "quality_metadata", "acquired_at_utc", "license", "attribution", "consent_data_card_evidence", "transformations"],
+    "license": "CC-BY-4.0 declaration is conditional evidence, not trained-weight redistribution approval",
+    "legalGate": "BLOCKED pending source integrity, consent/privacy, attribution, derivative-model, APK, and product/legal review"
+  },
+  "futureProcess": {
+    "authorizedNow": false,
+    "commandSpecification": "scripts/tts-data/acquire_controlled.py --dataset ai4bharat/indicvoices_r --revision 5f4495c91d500742a58d1be2ab07d77f73c0acf8 --languages hi,gu,mr,kn,ml,ta,te,or,bn --splits train,test --manifest /private/approved/indicvoices-r-manifest.json --max-hours-per-language 25 --require-speaker-disjoint-splits --output /private/tts-corpus/indicvoices-r --no-training",
+    "mustFailClosedOn": ["missing checksum", "missing row identity", "missing speaker ID", "budget exceeded", "unknown license/provenance", "speaker split overlap"]
+  }
+}

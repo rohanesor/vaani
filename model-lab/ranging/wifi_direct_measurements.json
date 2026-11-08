@@ -1,0 +1,9 @@
+{
+  "source":"prior physical L1 baseline",
+  "samples":[
+    {"exchange":"A_to_B","ackRttMs":35,"delivered":true,"zone":"NEAR","confidence":"MEDIUM"},
+    {"exchange":"B_to_A","ackRttMs":102,"delivered":true,"zone":"NEAR","confidence":"MEDIUM"}
+  ],
+  "distanceMeters":null,
+  "notes":"Communication metrics only; no position labels and no distance inference."
+}

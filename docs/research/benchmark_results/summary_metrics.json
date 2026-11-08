@@ -1,0 +1,2956 @@
+{
+  "summary": [
+    {
+      "channel": "gilbert_elliott",
+      "condition": "mild",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.166,
+      "semantic_recovery": 0.698,
+      "semantic_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "text_recovery": 0.698,
+      "text_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "frame_recovery": 0.698,
+      "frame_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "category_recovery": 0.698,
+      "category_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "urgency_recovery": 0.698,
+      "urgency_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "severity_recovery": 0.698,
+      "severity_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "victim_recovery": 0.698,
+      "victim_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "hazard_recovery": 0.698,
+      "hazard_ci95": [
+        0.6688297933190253,
+        0.7256547548407641
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 403,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.16107114308553158,
+      "semantic_latency_packet_units_mean": 2.4226361031518624,
+      "text_latency_packet_units_mean": 2.4226361031518624,
+      "useful_units_per_packet": 0.5579536370903277
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "mild",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.166,
+      "semantic_recovery": 0.749,
+      "semantic_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "text_recovery": 0.749,
+      "text_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "frame_recovery": 0.749,
+      "frame_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "category_recovery": 0.749,
+      "category_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "urgency_recovery": 0.749,
+      "urgency_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "severity_recovery": 0.749,
+      "severity_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "victim_recovery": 0.749,
+      "victim_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "hazard_recovery": 0.749,
+      "hazard_ci95": [
+        0.7212075582644133,
+        0.7748866462395643
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 816,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.1632,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.2996
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "mild",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.166,
+      "semantic_recovery": 0.846,
+      "semantic_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "text_recovery": 0.695,
+      "text_ci95": [
+        0.6657622874602453,
+        0.7227452220910624
+      ],
+      "frame_recovery": 0.846,
+      "frame_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "category_recovery": 0.846,
+      "category_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "urgency_recovery": 0.846,
+      "urgency_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "severity_recovery": 0.846,
+      "severity_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "victim_recovery": 0.846,
+      "victim_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "hazard_recovery": 0.846,
+      "hazard_ci95": [
+        0.8223076809446219,
+        0.8670441052335958
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 572,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.16342857142857142,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.437410071942446,
+      "useful_units_per_packet": 0.4402857142857143
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "mild",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.166,
+      "semantic_recovery": 0.944,
+      "semantic_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "text_recovery": 0.704,
+      "text_ci95": [
+        0.6749691107828159,
+        0.7314695145939368
+      ],
+      "frame_recovery": 0.944,
+      "frame_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "category_recovery": 0.944,
+      "category_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "urgency_recovery": 0.944,
+      "urgency_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "severity_recovery": 0.944,
+      "severity_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "victim_recovery": 0.944,
+      "victim_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "hazard_recovery": 0.944,
+      "hazard_ci95": [
+        0.9279763237468875,
+        0.9566253903083978
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 734,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.16311111111111112,
+      "semantic_latency_packet_units_mean": 1.103813559322034,
+      "text_latency_packet_units_mean": 4.403409090909091,
+      "useful_units_per_packet": 0.3662222222222222
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "mild",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.166,
+      "semantic_recovery": 0.98,
+      "semantic_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "text_recovery": 0.686,
+      "text_ci95": [
+        0.6565682399199134,
+        0.7140081538059494
+      ],
+      "frame_recovery": 0.98,
+      "frame_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "category_recovery": 0.98,
+      "category_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "urgency_recovery": 0.98,
+      "urgency_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "severity_recovery": 0.98,
+      "severity_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "victim_recovery": 0.98,
+      "victim_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "hazard_recovery": 0.98,
+      "hazard_ci95": [
+        0.9693097584861028,
+        0.9870164188709625
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 904,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.16436363636363635,
+      "semantic_latency_packet_units_mean": 1.1734693877551021,
+      "text_latency_packet_units_mean": 5.393586005830904,
+      "useful_units_per_packet": 0.3029090909090909
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "moderate",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.286,
+      "semantic_recovery": 0.591,
+      "semantic_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "text_recovery": 0.591,
+      "text_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "frame_recovery": 0.591,
+      "frame_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "category_recovery": 0.591,
+      "category_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "urgency_recovery": 0.591,
+      "urgency_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "severity_recovery": 0.591,
+      "severity_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "victim_recovery": 0.591,
+      "victim_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "hazard_recovery": 0.591,
+      "hazard_ci95": [
+        0.5602353853201139,
+        0.621068119137163
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 687,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.2745803357314149,
+      "semantic_latency_packet_units_mean": 2.4111675126903553,
+      "text_latency_packet_units_mean": 2.4111675126903553,
+      "useful_units_per_packet": 0.4724220623501199
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "moderate",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.286,
+      "semantic_recovery": 0.589,
+      "semantic_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "text_recovery": 0.589,
+      "text_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "frame_recovery": 0.589,
+      "frame_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "category_recovery": 0.589,
+      "category_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "urgency_recovery": 0.589,
+      "urgency_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "severity_recovery": 0.589,
+      "severity_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "victim_recovery": 0.589,
+      "victim_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "hazard_recovery": 0.589,
+      "hazard_ci95": [
+        0.5582204870707944,
+        0.6190983249808281
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 1421,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.2842,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.23559999999999998
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "moderate",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.286,
+      "semantic_recovery": 0.739,
+      "semantic_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "text_recovery": 0.576,
+      "text_ci95": [
+        0.5451362089936294,
+        0.6062821024212393
+      ],
+      "frame_recovery": 0.739,
+      "frame_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "category_recovery": 0.739,
+      "category_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "urgency_recovery": 0.739,
+      "urgency_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "severity_recovery": 0.739,
+      "severity_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "victim_recovery": 0.739,
+      "victim_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "hazard_recovery": 0.739,
+      "hazard_ci95": [
+        0.7109014620594993,
+        0.765269280416206
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 976,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.27885714285714286,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.4010416666666665,
+      "useful_units_per_packet": 0.3757142857142857
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "moderate",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.286,
+      "semantic_recovery": 0.839,
+      "semantic_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "text_recovery": 0.556,
+      "text_ci95": [
+        0.5250485919968327,
+        0.5865227953614917
+      ],
+      "frame_recovery": 0.839,
+      "frame_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "category_recovery": 0.839,
+      "category_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "urgency_recovery": 0.839,
+      "urgency_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "severity_recovery": 0.839,
+      "severity_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "victim_recovery": 0.839,
+      "victim_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "hazard_recovery": 0.839,
+      "hazard_ci95": [
+        0.8149295245985896,
+        0.8604758381598377
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 1274,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.2831111111111111,
+      "semantic_latency_packet_units_mean": 1.1191895113230035,
+      "text_latency_packet_units_mean": 4.4352517985611515,
+      "useful_units_per_packet": 0.31
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "moderate",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.286,
+      "semantic_recovery": 0.9,
+      "semantic_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "text_recovery": 0.574,
+      "text_ci95": [
+        0.5431251644557503,
+        0.6043084545534637
+      ],
+      "frame_recovery": 0.9,
+      "frame_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "category_recovery": 0.9,
+      "category_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "urgency_recovery": 0.9,
+      "urgency_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "severity_recovery": 0.9,
+      "severity_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "victim_recovery": 0.9,
+      "victim_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "hazard_recovery": 0.9,
+      "hazard_ci95": [
+        0.8798476375941197,
+        0.9170908435367681
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 1556,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.2829090909090909,
+      "semantic_latency_packet_units_mean": 1.2466666666666666,
+      "text_latency_packet_units_mean": 5.430313588850174,
+      "useful_units_per_packet": 0.268
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "severe",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.38599999999999995,
+      "semantic_recovery": 0.523,
+      "semantic_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "text_recovery": 0.523,
+      "text_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "frame_recovery": 0.523,
+      "frame_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "category_recovery": 0.523,
+      "category_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "urgency_recovery": 0.523,
+      "urgency_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "severity_recovery": 0.523,
+      "severity_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "victim_recovery": 0.523,
+      "victim_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "hazard_recovery": 0.523,
+      "hazard_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 934,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.3733013589128697,
+      "semantic_latency_packet_units_mean": 2.4359464627151053,
+      "text_latency_packet_units_mean": 2.4359464627151053,
+      "useful_units_per_packet": 0.41806554756195047
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "severe",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.38599999999999995,
+      "semantic_recovery": 0.529,
+      "semantic_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "text_recovery": 0.529,
+      "text_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "frame_recovery": 0.529,
+      "frame_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "category_recovery": 0.529,
+      "category_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "urgency_recovery": 0.529,
+      "urgency_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "severity_recovery": 0.529,
+      "severity_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "victim_recovery": 0.529,
+      "victim_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "hazard_recovery": 0.529,
+      "hazard_ci95": [
+        0.4980099243995127,
+        0.5597681154824767
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 1911,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.3822,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.2116
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "severe",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.38599999999999995,
+      "semantic_recovery": 0.622,
+      "semantic_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "text_recovery": 0.531,
+      "text_ci95": [
+        0.5000096789361564,
+        0.5617530533514875
+      ],
+      "frame_recovery": 0.622,
+      "frame_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "category_recovery": 0.622,
+      "category_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "urgency_recovery": 0.622,
+      "urgency_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "severity_recovery": 0.622,
+      "severity_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "victim_recovery": 0.622,
+      "victim_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "hazard_recovery": 0.622,
+      "hazard_ci95": [
+        0.5915334005989225,
+        0.6515328361459983
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 1321,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.37742857142857145,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.4218455743879472,
+      "useful_units_per_packet": 0.32942857142857146
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "severe",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.38599999999999995,
+      "semantic_recovery": 0.691,
+      "semantic_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "text_recovery": 0.52,
+      "text_ci95": [
+        0.4890171561146857,
+        0.5508297679418587
+      ],
+      "frame_recovery": 0.691,
+      "frame_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "category_recovery": 0.691,
+      "category_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "urgency_recovery": 0.691,
+      "urgency_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "severity_recovery": 0.691,
+      "severity_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "victim_recovery": 0.691,
+      "victim_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "hazard_recovery": 0.691,
+      "hazard_ci95": [
+        0.6616744854525756,
+        0.7188636392874233
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 1694,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.37644444444444447,
+      "semantic_latency_packet_units_mean": 1.0998552821997105,
+      "text_latency_packet_units_mean": 4.436538461538461,
+      "useful_units_per_packet": 0.26911111111111113
+    },
+    {
+      "channel": "gilbert_elliott",
+      "condition": "severe",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.38599999999999995,
+      "semantic_recovery": 0.738,
+      "semantic_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "text_recovery": 0.523,
+      "text_ci95": [
+        0.49201363243599017,
+        0.5538103302290359
+      ],
+      "frame_recovery": 0.738,
+      "frame_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "category_recovery": 0.738,
+      "category_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "urgency_recovery": 0.738,
+      "urgency_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "severity_recovery": 0.738,
+      "severity_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "victim_recovery": 0.738,
+      "victim_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "hazard_recovery": 0.738,
+      "hazard_ci95": [
+        0.709871862427285,
+        0.7643065338455931
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 2083,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.37872727272727275,
+      "semantic_latency_packet_units_mean": 1.2208672086720866,
+      "text_latency_packet_units_mean": 5.4397705544933075,
+      "useful_units_per_packet": 0.22927272727272727
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.00",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.0,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 1.0,
+      "text_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 0,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.0,
+      "semantic_latency_packet_units_mean": 2.502,
+      "text_latency_packet_units_mean": 2.502,
+      "useful_units_per_packet": 0.7993605115907275
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.00",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.0,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 1.0,
+      "text_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 0,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.0,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.4
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.00",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.0,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 1.0,
+      "text_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 0,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.0,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.5,
+      "useful_units_per_packet": 0.5714285714285714
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.00",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.0,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 1.0,
+      "text_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 0,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.0,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 4.5,
+      "useful_units_per_packet": 0.4444444444444444
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.00",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.0,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 1.0,
+      "text_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 0,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.0,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 5.5,
+      "useful_units_per_packet": 0.36363636363636365
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.05",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.05,
+      "semantic_recovery": 0.885,
+      "semantic_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "text_recovery": 0.885,
+      "text_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "frame_recovery": 0.885,
+      "frame_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "category_recovery": 0.885,
+      "category_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "urgency_recovery": 0.885,
+      "urgency_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "severity_recovery": 0.885,
+      "severity_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "victim_recovery": 0.885,
+      "victim_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "hazard_recovery": 0.885,
+      "hazard_ci95": [
+        0.8637364095483508,
+        0.9033168785401287
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 123,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.049160671462829736,
+      "semantic_latency_packet_units_mean": 2.458757062146893,
+      "text_latency_packet_units_mean": 2.458757062146893,
+      "useful_units_per_packet": 0.7074340527577938
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.05",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.05,
+      "semantic_recovery": 0.974,
+      "semantic_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "text_recovery": 0.974,
+      "text_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "frame_recovery": 0.974,
+      "frame_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "category_recovery": 0.974,
+      "category_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "urgency_recovery": 0.974,
+      "urgency_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "severity_recovery": 0.974,
+      "severity_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "victim_recovery": 0.974,
+      "victim_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "hazard_recovery": 0.974,
+      "hazard_ci95": [
+        0.9621759154980226,
+        0.9821961846420791
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 257,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.0514,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.3896
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.05",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.05,
+      "semantic_recovery": 0.957,
+      "semantic_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "text_recovery": 0.881,
+      "text_ci95": [
+        0.8594587714640507,
+        0.8996251318131199
+      ],
+      "frame_recovery": 0.957,
+      "frame_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "category_recovery": 0.957,
+      "category_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "urgency_recovery": 0.957,
+      "urgency_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "severity_recovery": 0.957,
+      "severity_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "victim_recovery": 0.957,
+      "victim_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "hazard_recovery": 0.957,
+      "hazard_ci95": [
+        0.9425806957803401,
+        0.9679215189116991
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 170,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.04857142857142857,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.452894438138479,
+      "useful_units_per_packet": 0.5251428571428571
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.05",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.05,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 0.854,
+      "text_ci95": [
+        0.8307594766742207,
+        0.8745310791266149
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 245,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.05444444444444444,
+      "semantic_latency_packet_units_mean": 1.043,
+      "text_latency_packet_units_mean": 4.446135831381733,
+      "useful_units_per_packet": 0.41200000000000003
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.05",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.05,
+      "semantic_recovery": 1.0,
+      "semantic_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "text_recovery": 0.868,
+      "text_ci95": [
+        0.8456047044505801,
+        0.8875786981898366
+      ],
+      "frame_recovery": 1.0,
+      "frame_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "category_recovery": 1.0,
+      "category_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "urgency_recovery": 1.0,
+      "urgency_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "severity_recovery": 1.0,
+      "severity_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "victim_recovery": 1.0,
+      "victim_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "hazard_recovery": 1.0,
+      "hazard_ci95": [
+        0.9961731014136095,
+        1.0
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 280,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.05090909090909091,
+      "semantic_latency_packet_units_mean": 1.043,
+      "text_latency_packet_units_mean": 5.4481566820276495,
+      "useful_units_per_packet": 0.3396363636363637
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.10",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.1,
+      "semantic_recovery": 0.762,
+      "semantic_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "text_recovery": 0.762,
+      "text_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "frame_recovery": 0.762,
+      "frame_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "category_recovery": 0.762,
+      "category_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "urgency_recovery": 0.762,
+      "urgency_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "severity_recovery": 0.762,
+      "severity_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "victim_recovery": 0.762,
+      "victim_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "hazard_recovery": 0.762,
+      "hazard_ci95": [
+        0.7346338110423086,
+        0.7873608940984228
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 268,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.10711430855315747,
+      "semantic_latency_packet_units_mean": 2.421259842519685,
+      "text_latency_packet_units_mean": 2.421259842519685,
+      "useful_units_per_packet": 0.6091127098321344
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.10",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.1,
+      "semantic_recovery": 0.91,
+      "semantic_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "text_recovery": 0.91,
+      "text_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "frame_recovery": 0.91,
+      "frame_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "category_recovery": 0.91,
+      "category_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "urgency_recovery": 0.91,
+      "urgency_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "severity_recovery": 0.91,
+      "severity_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "victim_recovery": 0.91,
+      "victim_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "hazard_recovery": 0.91,
+      "hazard_ci95": [
+        0.8906578220441299,
+        0.92620412111503
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 524,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.1048,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.364
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.10",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.1,
+      "semantic_recovery": 0.89,
+      "semantic_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "text_recovery": 0.781,
+      "text_ci95": [
+        0.7543178981817001,
+        0.8055313848127484
+      ],
+      "frame_recovery": 0.89,
+      "frame_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "category_recovery": 0.89,
+      "category_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "urgency_recovery": 0.89,
+      "urgency_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "severity_recovery": 0.89,
+      "severity_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "victim_recovery": 0.89,
+      "victim_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "hazard_recovery": 0.89,
+      "hazard_ci95": [
+        0.869094088952478,
+        0.9079209301501375
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 347,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.09914285714285714,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.4263764404609476,
+      "useful_units_per_packet": 0.4774285714285714
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.10",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.1,
+      "semantic_recovery": 0.989,
+      "semantic_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "text_recovery": 0.763,
+      "text_ci95": [
+        0.7356679698590534,
+        0.7883190814845054
+      ],
+      "frame_recovery": 0.989,
+      "frame_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "category_recovery": 0.989,
+      "category_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "urgency_recovery": 0.989,
+      "urgency_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "severity_recovery": 0.989,
+      "severity_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "victim_recovery": 0.989,
+      "victim_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "hazard_recovery": 0.989,
+      "hazard_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 466,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.10355555555555555,
+      "semantic_latency_packet_units_mean": 1.1001011122345803,
+      "text_latency_packet_units_mean": 4.3971166448230665,
+      "useful_units_per_packet": 0.3893333333333333
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.10",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.1,
+      "semantic_recovery": 0.999,
+      "semantic_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "text_recovery": 0.74,
+      "text_ci95": [
+        0.7119312432576527,
+        0.76623184542088
+      ],
+      "frame_recovery": 0.999,
+      "frame_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "category_recovery": 0.999,
+      "category_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "urgency_recovery": 0.999,
+      "urgency_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "severity_recovery": 0.999,
+      "severity_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "victim_recovery": 0.999,
+      "victim_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "hazard_recovery": 0.999,
+      "hazard_ci95": [
+        0.9943572970398398,
+        0.9998234581709429
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 579,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.10527272727272727,
+      "semantic_latency_packet_units_mean": 1.1191191191191192,
+      "text_latency_packet_units_mean": 5.397297297297297,
+      "useful_units_per_packet": 0.3161818181818182
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.20",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.2,
+      "semantic_recovery": 0.6,
+      "semantic_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "text_recovery": 0.6,
+      "text_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "frame_recovery": 0.6,
+      "frame_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "category_recovery": 0.6,
+      "category_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "urgency_recovery": 0.6,
+      "urgency_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "severity_recovery": 0.6,
+      "severity_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "victim_recovery": 0.6,
+      "victim_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "hazard_recovery": 0.6,
+      "hazard_ci95": [
+        0.5693088606220993,
+        0.6299257596606225
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 492,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.19664268585131894,
+      "semantic_latency_packet_units_mean": 2.355,
+      "text_latency_packet_units_mean": 2.355,
+      "useful_units_per_packet": 0.47961630695443647
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.20",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.2,
+      "semantic_recovery": 0.751,
+      "semantic_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "text_recovery": 0.751,
+      "text_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "frame_recovery": 0.751,
+      "frame_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "category_recovery": 0.751,
+      "category_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "urgency_recovery": 0.751,
+      "urgency_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "severity_recovery": 0.751,
+      "severity_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "victim_recovery": 0.751,
+      "victim_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "hazard_recovery": 0.751,
+      "hazard_ci95": [
+        0.7232710180184344,
+        0.7768078788911975
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 1003,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.2006,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.3004
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.20",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.2,
+      "semantic_recovery": 0.814,
+      "semantic_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "text_recovery": 0.583,
+      "text_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "frame_recovery": 0.814,
+      "frame_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "category_recovery": 0.814,
+      "category_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "urgency_recovery": 0.814,
+      "urgency_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "severity_recovery": 0.814,
+      "severity_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "victim_recovery": 0.814,
+      "victim_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "hazard_recovery": 0.814,
+      "hazard_ci95": [
+        0.7886974885677385,
+        0.8368992191200082
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 690,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.19714285714285715,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.327615780445969,
+      "useful_units_per_packet": 0.39914285714285713
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.20",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.2,
+      "semantic_recovery": 0.958,
+      "semantic_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "text_recovery": 0.578,
+      "text_ci95": [
+        0.5471477640586072,
+        0.6082552397619158
+      ],
+      "frame_recovery": 0.958,
+      "frame_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "category_recovery": 0.958,
+      "category_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "urgency_recovery": 0.958,
+      "urgency_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "severity_recovery": 0.958,
+      "severity_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "victim_recovery": 0.958,
+      "victim_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "hazard_recovery": 0.958,
+      "hazard_ci95": [
+        0.9437152767228901,
+        0.9687792841719761
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 896,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.1991111111111111,
+      "semantic_latency_packet_units_mean": 1.150313152400835,
+      "text_latency_packet_units_mean": 4.354671280276817,
+      "useful_units_per_packet": 0.3413333333333333
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.20",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.2,
+      "semantic_recovery": 0.989,
+      "semantic_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "text_recovery": 0.577,
+      "text_ci95": [
+        0.546141922650669,
+        0.6072687349670269
+      ],
+      "frame_recovery": 0.989,
+      "frame_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "category_recovery": 0.989,
+      "category_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "urgency_recovery": 0.989,
+      "urgency_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "severity_recovery": 0.989,
+      "severity_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "victim_recovery": 0.989,
+      "victim_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "hazard_recovery": 0.989,
+      "hazard_ci95": [
+        0.9804104032716243,
+        0.9938468899108859
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 1097,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.19945454545454547,
+      "semantic_latency_packet_units_mean": 1.2082912032355915,
+      "text_latency_packet_units_mean": 5.37261698440208,
+      "useful_units_per_packet": 0.2847272727272727
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.30",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.3,
+      "semantic_recovery": 0.448,
+      "semantic_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "text_recovery": 0.448,
+      "text_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "frame_recovery": 0.448,
+      "frame_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "category_recovery": 0.448,
+      "category_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "urgency_recovery": 0.448,
+      "urgency_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "severity_recovery": 0.448,
+      "severity_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "victim_recovery": 0.448,
+      "victim_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "hazard_recovery": 0.448,
+      "hazard_ci95": [
+        0.4174351187157854,
+        0.47896287873719934
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 741,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.2961630695443645,
+      "semantic_latency_packet_units_mean": 2.2455357142857144,
+      "text_latency_packet_units_mean": 2.2455357142857144,
+      "useful_units_per_packet": 0.3581135091926459
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.30",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.3,
+      "semantic_recovery": 0.543,
+      "semantic_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "text_recovery": 0.543,
+      "text_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "frame_recovery": 0.543,
+      "frame_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "category_recovery": 0.543,
+      "category_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "urgency_recovery": 0.543,
+      "urgency_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "severity_recovery": 0.543,
+      "severity_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "victim_recovery": 0.543,
+      "victim_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "hazard_recovery": 0.543,
+      "hazard_ci95": [
+        0.5120186331754513,
+        0.5736522535461193
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 1499,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.2998,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.2172
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.30",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.3,
+      "semantic_recovery": 0.702,
+      "semantic_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "text_recovery": 0.42,
+      "text_ci95": [
+        0.3897721343880201,
+        0.45084016938580246
+      ],
+      "frame_recovery": 0.702,
+      "frame_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "category_recovery": 0.702,
+      "category_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "urgency_recovery": 0.702,
+      "urgency_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "severity_recovery": 0.702,
+      "severity_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "victim_recovery": 0.702,
+      "victim_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "hazard_recovery": 0.702,
+      "hazard_ci95": [
+        0.6729220295046439,
+        0.7295319034664542
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 1071,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.306,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.242857142857143,
+      "useful_units_per_packet": 0.3205714285714286
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.30",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.3,
+      "semantic_recovery": 0.901,
+      "semantic_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "text_recovery": 0.412,
+      "text_ci95": [
+        0.3818867661559336,
+        0.4427867679952712
+      ],
+      "frame_recovery": 0.901,
+      "frame_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "category_recovery": 0.901,
+      "category_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "urgency_recovery": 0.901,
+      "urgency_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "severity_recovery": 0.901,
+      "severity_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "victim_recovery": 0.901,
+      "victim_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "hazard_recovery": 0.901,
+      "hazard_ci95": [
+        0.8809259831949872,
+        0.9180048441387278
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 1350,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.3,
+      "semantic_latency_packet_units_mean": 1.2208657047724751,
+      "text_latency_packet_units_mean": 4.274271844660194,
+      "useful_units_per_packet": 0.29177777777777775
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.30",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.3,
+      "semantic_recovery": 0.964,
+      "semantic_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "text_recovery": 0.418,
+      "text_ci95": [
+        0.38780002102026195,
+        0.44882759034790615
+      ],
+      "frame_recovery": 0.964,
+      "frame_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "category_recovery": 0.964,
+      "category_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "urgency_recovery": 0.964,
+      "urgency_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "severity_recovery": 0.964,
+      "severity_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "victim_recovery": 0.964,
+      "victim_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "hazard_recovery": 0.964,
+      "hazard_ci95": [
+        0.9505640561361824,
+        0.9738845819756471
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 1651,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.30018181818181816,
+      "semantic_latency_packet_units_mean": 1.3371369294605808,
+      "text_latency_packet_units_mean": 5.279904306220096,
+      "useful_units_per_packet": 0.25127272727272726
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.40",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.4,
+      "semantic_recovery": 0.289,
+      "semantic_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "text_recovery": 0.289,
+      "text_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "frame_recovery": 0.289,
+      "frame_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "category_recovery": 0.289,
+      "category_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "urgency_recovery": 0.289,
+      "urgency_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "severity_recovery": 0.289,
+      "severity_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "victim_recovery": 0.289,
+      "victim_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "hazard_recovery": 0.289,
+      "hazard_ci95": [
+        0.2617539675950579,
+        0.31786098360839893
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 1026,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.41007194244604317,
+      "semantic_latency_packet_units_mean": 2.114186851211073,
+      "text_latency_packet_units_mean": 2.114186851211073,
+      "useful_units_per_packet": 0.23101518784972022
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.40",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.4,
+      "semantic_recovery": 0.333,
+      "semantic_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "text_recovery": 0.333,
+      "text_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "frame_recovery": 0.333,
+      "frame_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "category_recovery": 0.333,
+      "category_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "urgency_recovery": 0.333,
+      "urgency_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "severity_recovery": 0.333,
+      "severity_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "victim_recovery": 0.333,
+      "victim_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "hazard_recovery": 0.333,
+      "hazard_ci95": [
+        0.30447739268635393,
+        0.3628007914415006
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 2009,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.4018,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.1332
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.40",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.4,
+      "semantic_recovery": 0.583,
+      "semantic_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "text_recovery": 0.307,
+      "text_ci95": [
+        0.2791952556296626,
+        0.33628192722468425
+      ],
+      "frame_recovery": 0.583,
+      "frame_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "category_recovery": 0.583,
+      "category_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "urgency_recovery": 0.583,
+      "urgency_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "severity_recovery": 0.583,
+      "severity_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "victim_recovery": 0.583,
+      "victim_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "hazard_recovery": 0.583,
+      "hazard_ci95": [
+        0.5521788916695798,
+        0.6131858431650794
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 1421,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.406,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.179153094462541,
+      "useful_units_per_packet": 0.2542857142857143
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.40",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.4,
+      "semantic_recovery": 0.825,
+      "semantic_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "text_recovery": 0.324,
+      "text_ci95": [
+        0.29571431654715963,
+        0.3536327517552499
+      ],
+      "frame_recovery": 0.825,
+      "frame_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "category_recovery": 0.825,
+      "category_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "urgency_recovery": 0.825,
+      "urgency_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "severity_recovery": 0.825,
+      "severity_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "victim_recovery": 0.825,
+      "victim_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "hazard_recovery": 0.825,
+      "hazard_ci95": [
+        0.8002178770109885,
+        0.8472946389078577
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 1823,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.4051111111111111,
+      "semantic_latency_packet_units_mean": 1.2933333333333332,
+      "text_latency_packet_units_mean": 4.280864197530864,
+      "useful_units_per_packet": 0.25533333333333336
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.40",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.4,
+      "semantic_recovery": 0.924,
+      "semantic_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "text_recovery": 0.315,
+      "text_ci95": [
+        0.28696340678905985,
+        0.34445254568790473
+      ],
+      "frame_recovery": 0.924,
+      "frame_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "category_recovery": 0.924,
+      "category_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "urgency_recovery": 0.924,
+      "urgency_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "severity_recovery": 0.924,
+      "severity_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "victim_recovery": 0.924,
+      "victim_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "hazard_recovery": 0.924,
+      "hazard_ci95": [
+        0.9059039930034635,
+        0.9388507969952776
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 2219,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.40345454545454545,
+      "semantic_latency_packet_units_mean": 1.4761904761904763,
+      "text_latency_packet_units_mean": 5.155555555555556,
+      "useful_units_per_packet": 0.2252727272727273
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.50",
+      "system": "A_text_only",
+      "trials": 1000,
+      "configured_loss": 0.5,
+      "semantic_recovery": 0.202,
+      "semantic_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "text_recovery": 0.202,
+      "text_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "frame_recovery": 0.202,
+      "frame_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "category_recovery": 0.202,
+      "category_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "urgency_recovery": 0.202,
+      "urgency_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "severity_recovery": 0.202,
+      "severity_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "victim_recovery": 0.202,
+      "victim_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "hazard_recovery": 0.202,
+      "hazard_ci95": [
+        0.17827716392625706,
+        0.22800366763123178
+      ],
+      "packets_transmitted_mean": 2.502,
+      "bytes_transmitted_mean": 63.229,
+      "erased_packets": 1276,
+      "transmitted_packets": 2502,
+      "observed_loss": 0.5099920063948841,
+      "semantic_latency_packet_units_mean": 1.995049504950495,
+      "text_latency_packet_units_mean": 1.995049504950495,
+      "useful_units_per_packet": 0.16147082334132695
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.50",
+      "system": "B_xor_fec_k4_n5",
+      "trials": 1000,
+      "configured_loss": 0.5,
+      "semantic_recovery": 0.192,
+      "semantic_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "text_recovery": 0.192,
+      "text_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "frame_recovery": 0.192,
+      "frame_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "category_recovery": 0.192,
+      "category_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "urgency_recovery": 0.192,
+      "urgency_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "severity_recovery": 0.192,
+      "severity_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "victim_recovery": 0.192,
+      "victim_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "hazard_recovery": 0.192,
+      "hazard_ci95": [
+        0.1687844428851688,
+        0.21757292664404781
+      ],
+      "packets_transmitted_mean": 5.0,
+      "bytes_transmitted_mean": 160.0,
+      "erased_packets": 2486,
+      "transmitted_packets": 5000,
+      "observed_loss": 0.4972,
+      "semantic_latency_packet_units_mean": 5.0,
+      "text_latency_packet_units_mean": 5.0,
+      "useful_units_per_packet": 0.07680000000000001
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.50",
+      "system": "C_semantic_priority_r1",
+      "trials": 1000,
+      "configured_loss": 0.5,
+      "semantic_recovery": 0.489,
+      "semantic_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "text_recovery": 0.207,
+      "text_ci95": [
+        0.18303250886513583,
+        0.23321005370648906
+      ],
+      "frame_recovery": 0.489,
+      "frame_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "category_recovery": 0.489,
+      "category_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "urgency_recovery": 0.489,
+      "urgency_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "severity_recovery": 0.489,
+      "severity_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "victim_recovery": 0.489,
+      "victim_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "hazard_recovery": 0.489,
+      "hazard_ci95": [
+        0.4581185876110968,
+        0.5199656041578039
+      ],
+      "packets_transmitted_mean": 3.5,
+      "bytes_transmitted_mean": 70.168,
+      "erased_packets": 1762,
+      "transmitted_packets": 3500,
+      "observed_loss": 0.5034285714285714,
+      "semantic_latency_packet_units_mean": 1.0,
+      "text_latency_packet_units_mean": 3.072463768115942,
+      "useful_units_per_packet": 0.19885714285714284
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.50",
+      "system": "C_semantic_priority_r2",
+      "trials": 1000,
+      "configured_loss": 0.5,
+      "semantic_recovery": 0.743,
+      "semantic_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "text_recovery": 0.23,
+      "text_ci95": [
+        0.20497925388093172,
+        0.25708727135571924
+      ],
+      "frame_recovery": 0.743,
+      "frame_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "category_recovery": 0.743,
+      "category_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "urgency_recovery": 0.743,
+      "urgency_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "severity_recovery": 0.743,
+      "severity_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "victim_recovery": 0.743,
+      "victim_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "hazard_recovery": 0.743,
+      "hazard_ci95": [
+        0.7150216830339959,
+        0.7691184442530183
+      ],
+      "packets_transmitted_mean": 4.5,
+      "bytes_transmitted_mean": 77.179,
+      "erased_packets": 2252,
+      "transmitted_packets": 4500,
+      "observed_loss": 0.5004444444444445,
+      "semantic_latency_packet_units_mean": 1.34185733512786,
+      "text_latency_packet_units_mean": 4.073913043478261,
+      "useful_units_per_packet": 0.2162222222222222
+    },
+    {
+      "channel": "independent",
+      "condition": "p=0.50",
+      "system": "C_semantic_priority_r3",
+      "trials": 1000,
+      "configured_loss": 0.5,
+      "semantic_recovery": 0.876,
+      "semantic_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "text_recovery": 0.215,
+      "text_ci95": [
+        0.19065300972996616,
+        0.2415283224642765
+      ],
+      "frame_recovery": 0.876,
+      "frame_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "category_recovery": 0.876,
+      "category_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "urgency_recovery": 0.876,
+      "urgency_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "severity_recovery": 0.876,
+      "severity_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "victim_recovery": 0.876,
+      "victim_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "hazard_recovery": 0.876,
+      "hazard_ci95": [
+        0.8541218223197016,
+        0.8950003499433328
+      ],
+      "packets_transmitted_mean": 5.5,
+      "bytes_transmitted_mean": 84.182,
+      "erased_packets": 2749,
+      "transmitted_packets": 5500,
+      "observed_loss": 0.49981818181818183,
+      "semantic_latency_packet_units_mean": 1.5936073059360731,
+      "text_latency_packet_units_mean": 5.1069767441860465,
+      "useful_units_per_packet": 0.19836363636363635
+    }
+  ],
+  "analytical_replication_checks": [
+    {
+      "loss": 0.0,
+      "replicas": 1,
+      "theory": 1.0,
+      "monte_carlo": 1.0,
+      "absolute_error": 0.0,
+      "trials": 100000
+    },
+    {
+      "loss": 0.0,
+      "replicas": 2,
+      "theory": 1.0,
+      "monte_carlo": 1.0,
+      "absolute_error": 0.0,
+      "trials": 100000
+    },
+    {
+      "loss": 0.0,
+      "replicas": 3,
+      "theory": 1.0,
+      "monte_carlo": 1.0,
+      "absolute_error": 0.0,
+      "trials": 100000
+    },
+    {
+      "loss": 0.05,
+      "replicas": 1,
+      "theory": 0.95,
+      "monte_carlo": 0.95029,
+      "absolute_error": 0.00029000000000001247,
+      "trials": 100000
+    },
+    {
+      "loss": 0.05,
+      "replicas": 2,
+      "theory": 0.9975,
+      "monte_carlo": 0.99768,
+      "absolute_error": 0.00017999999999995797,
+      "trials": 100000
+    },
+    {
+      "loss": 0.05,
+      "replicas": 3,
+      "theory": 0.999875,
+      "monte_carlo": 0.99988,
+      "absolute_error": 5.000000000032756e-06,
+      "trials": 100000
+    },
+    {
+      "loss": 0.1,
+      "replicas": 1,
+      "theory": 0.9,
+      "monte_carlo": 0.90045,
+      "absolute_error": 0.00044999999999995044,
+      "trials": 100000
+    },
+    {
+      "loss": 0.1,
+      "replicas": 2,
+      "theory": 0.99,
+      "monte_carlo": 0.9903,
+      "absolute_error": 0.00029999999999996696,
+      "trials": 100000
+    },
+    {
+      "loss": 0.1,
+      "replicas": 3,
+      "theory": 0.999,
+      "monte_carlo": 0.99897,
+      "absolute_error": 2.999999999997449e-05,
+      "trials": 100000
+    },
+    {
+      "loss": 0.2,
+      "replicas": 1,
+      "theory": 0.8,
+      "monte_carlo": 0.79963,
+      "absolute_error": 0.0003700000000000925,
+      "trials": 100000
+    },
+    {
+      "loss": 0.2,
+      "replicas": 2,
+      "theory": 0.96,
+      "monte_carlo": 0.95987,
+      "absolute_error": 0.00012999999999996348,
+      "trials": 100000
+    },
+    {
+      "loss": 0.2,
+      "replicas": 3,
+      "theory": 0.992,
+      "monte_carlo": 0.99208,
+      "absolute_error": 7.999999999996898e-05,
+      "trials": 100000
+    },
+    {
+      "loss": 0.3,
+      "replicas": 1,
+      "theory": 0.7,
+      "monte_carlo": 0.70134,
+      "absolute_error": 0.0013400000000000079,
+      "trials": 100000
+    },
+    {
+      "loss": 0.3,
+      "replicas": 2,
+      "theory": 0.91,
+      "monte_carlo": 0.91054,
+      "absolute_error": 0.0005399999999999849,
+      "trials": 100000
+    },
+    {
+      "loss": 0.3,
+      "replicas": 3,
+      "theory": 0.973,
+      "monte_carlo": 0.97307,
+      "absolute_error": 7.00000000000145e-05,
+      "trials": 100000
+    },
+    {
+      "loss": 0.4,
+      "replicas": 1,
+      "theory": 0.6,
+      "monte_carlo": 0.6001,
+      "absolute_error": 9.999999999998899e-05,
+      "trials": 100000
+    },
+    {
+      "loss": 0.4,
+      "replicas": 2,
+      "theory": 0.84,
+      "monte_carlo": 0.83983,
+      "absolute_error": 0.00017000000000000348,
+      "trials": 100000
+    },
+    {
+      "loss": 0.4,
+      "replicas": 3,
+      "theory": 0.9359999999999999,
+      "monte_carlo": 0.93719,
+      "absolute_error": 0.0011900000000000244,
+      "trials": 100000
+    },
+    {
+      "loss": 0.5,
+      "replicas": 1,
+      "theory": 0.5,
+      "monte_carlo": 0.49952,
+      "absolute_error": 0.00047999999999998044,
+      "trials": 100000
+    },
+    {
+      "loss": 0.5,
+      "replicas": 2,
+      "theory": 0.75,
+      "monte_carlo": 0.74938,
+      "absolute_error": 0.0006199999999999539,
+      "trials": 100000
+    },
+    {
+      "loss": 0.5,
+      "replicas": 3,
+      "theory": 0.875,
+      "monte_carlo": 0.8767,
+      "absolute_error": 0.0017000000000000348,
+      "trials": 100000
+    }
+  ],
+  "fec_sanity": [
+    {
+      "erased_of_5": 0,
+      "recovery_possible": true,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    },
+    {
+      "erased_of_5": 1,
+      "recovery_possible": true,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    },
+    {
+      "erased_of_5": 2,
+      "recovery_possible": false,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    },
+    {
+      "erased_of_5": 3,
+      "recovery_possible": false,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    },
+    {
+      "erased_of_5": 4,
+      "recovery_possible": false,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    },
+    {
+      "erased_of_5": 5,
+      "recovery_possible": false,
+      "condition": "all four data packets available, or exactly one data packet erased with parity received"
+    }
+  ]
+}

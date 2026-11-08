@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Vaani.Starting">
+        <item name="android:windowSplashScreenBrandingImage">@drawable/vokie_splash_branding</item>
+    </style>
+</resources>

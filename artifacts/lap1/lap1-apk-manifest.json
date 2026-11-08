@@ -1,0 +1,62 @@
+{
+  "artifact": "app-debug.apk",
+  "canonical_name": "itantra-lap1-canonical",
+  "source_commit": "7eafdbc",
+  "source_branch": "sih/ui-fidelity-corrections-wip",
+  "sha256": "8b04aa459df750c1f34e130028dd1427de7ee4999163afa1c82a948167f0f3cf",
+  "size_bytes": 503080403,
+  "package_name": "com.vokie",
+  "application_id": "com.vokie",
+  "version_code": "1",
+  "version_name": "1.0.0",
+  "build_variant": "debug",
+  "build_command": "./gradlew assembleDebug --no-daemon",
+  "abi": ["arm64-v8a"],
+  "min_sdk": 24,
+  "target_sdk": 34,
+  "compile_sdk": 34,
+  "status": "CANONICAL",
+  "validation": "PHASE_0_5_TWO_PHONE_PHYSICAL_VALIDATION",
+  "native_libraries": [
+    "libvokie_whisper.so",
+    "libvokie_ct2.so",
+    "libonnxruntime.so",
+    "libsherpa-onnx-jni.so",
+    "libsherpa-onnx-c-api.so",
+    "libc++_shared.so"
+  ],
+  "bundled_models": {
+    "stt": {
+      "ggml-tiny-q5_1.bin": {
+        "sha256": "818710568da3ca15689e31a743197b520007872ff9576237bda97bd1b469c3d7",
+        "size_bytes": 32152673
+      }
+    },
+    "tts": {
+      "eng/model.onnx": {
+        "sha256": "e3a198f6a4473429bab138be040e7cd40d2cab7a31b6410ff0a94d5a7fbbc254",
+        "size_bytes": 114016948
+      },
+      "hin/model.onnx": {
+        "sha256": "8871f3e07adb6ca490f8dbcd3956a8647c53c35b5d0a1c2a8d097b3bf721a31b",
+        "size_bytes": 63145178
+      },
+      "tam/model.onnx": {
+        "sha256": "c86cf0a0657d57577d937b806d7b63d638cff522b5687cb650dde24bc71c5c88",
+        "size_bytes": 114032312
+      },
+      "guj/model.onnx": {
+        "sha256": "59f073b2e63771dd7d7972c17577e05a903ae6f4aa8c65a6dc1d9eb1a9812ed2",
+        "size_bytes": 114033848
+      }
+    }
+  },
+  "rejection_criteria": {
+    "max_acceptable_size_bytes": 600000000,
+    "min_acceptable_size_bytes": 400000000,
+    "must_contain_native_libs": true,
+    "must_contain_bundled_models": true
+  },
+  "created": "2025-01-27",
+  "notes": "Canonical LAP1 APK for LAP2 pipeline testing. Do NOT substitute with smaller APK."
+}
