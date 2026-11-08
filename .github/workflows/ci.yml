@@ -47,6 +47,8 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
       - run: npm ci
+      - name: Install server dependencies used by the Playwright harness
+        run: cd ../server && npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run typecheck
       # The Playwright harness serves client/dist, so build before browser tests.
@@ -73,7 +75,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
+      # GitHub-hosted Ubuntu runners already provide an Android SDK. The setup action's
+      # legacy `sdkmanager tools` invocation fails with current command-line tools.
       - uses: gradle/actions/setup-gradle@v4
       - run: chmod +x gradlew
       - name: JVM tests, instrumentation compilation, and debug APK
@@ -103,6 +106,7 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
       - run: cd client && npm ci
+      - run: cd server && npm ci
       - run: cd client && npx playwright install --with-deps chromium
       - name: Verify canonical token copy and real WebView assets
         run: |
