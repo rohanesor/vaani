@@ -1,85 +1,118 @@
-name: iTantra CI
+name: VAANI CI
 
 on:
   push:
-    branches: [main, sih/ui-fidelity-corrections-wip, 'feature/*']
+    branches: [main, 'feature/**']
   pull_request:
 
 permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
+  group: vaani-ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  quality_and_website:
-    name: Quality, Website & Security
+  server:
+    name: Server contract and build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: server
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
+          node-version: 22
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
 
-      - name: Run branding regression, website integrity, and security audit
-        run: python3 scripts/ci-branding-and-security-check.py
+  web:
+    name: Canonical web E2E
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: client
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      # The Playwright harness serves client/dist, so build before browser tests.
+      - run: npm run build
+      - run: npm test
+      - name: Upload web failure artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vaani-web-playwright-artifacts
+          path: |
+            client/test-results/
+            client/playwright-report/
+          if-no-files-found: ignore
+          retention-days: 14
 
   android:
-    name: Android Test, Lint & Build
+    name: Android compile, tests, package
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Make Gradle wrapper executable
-        run: chmod +x ./gradlew
-
-      - name: Unit tests
-        run: ./gradlew test --no-daemon
-
-      - name: Upload unit test reports
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - run: chmod +x gradlew
+      - name: JVM tests, instrumentation compilation, and debug APK
+        run: ./gradlew :app:testDebugUnitTest :app:compileDebugAndroidTestKotlin :app:assembleDebug --no-daemon
+      - name: Upload Android reports and debug APK
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: itantra-unit-test-reports
-          path: app/build/reports/tests/
+          name: vaani-android-debug-and-reports
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/reports/tests/
+            app/build/test-results/
           if-no-files-found: ignore
-          retention-days: 7
+          retention-days: 14
 
-      - name: Android lint
-        run: ./gradlew lint --no-daemon
-
-      - name: Upload lint reports
+  android-webview-contract:
+    name: Android WebView bridge contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - run: cd client && npm ci
+      - run: cd client && npx playwright install --with-deps chromium
+      - name: Verify canonical token copy and real WebView assets
+        run: |
+          node scripts/sync-android-webview-tokens.mjs --check
+          NODE_PATH="$GITHUB_WORKSPACE/client/node_modules" node tests/android-webview/run.cjs
+      - name: Upload WebView harness artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: itantra-lint-reports
-          path: app/build/reports/lint-results-debug.*
+          name: vaani-android-webview-contract-artifacts
+          path: docs/android-ui/screens/
           if-no-files-found: ignore
-          retention-days: 7
-
-      - name: Assemble debug APK
-        run: ./gradlew assembleDebug --no-daemon
-
-      - name: Upload debug APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: itantra-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
           retention-days: 14

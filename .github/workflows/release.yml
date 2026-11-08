@@ -1,229 +1,46 @@
-name: iTantra Release
+name: VAANI Release Candidate
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release-candidate version, for example 0.1.0-rc.1
+        required: true
+        type: string
 
 permissions:
-  contents: write
-  id-token: write
+  contents: read
 
 concurrency:
-  group: release-${{ github.ref }}
+  group: vaani-release-candidate-${{ github.ref }}
   cancel-in-progress: false
 
-env:
-  AWS_REGION: ${{ vars.AWS_REGION }}
-  VOKIE_BUCKET: ${{ vars.VOKIE_BUCKET }}
-  VOKIE_CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.VOKIE_CLOUDFRONT_DISTRIBUTION_ID }}
-  VOKIE_MODELS_BUCKET: ${{ vars.VOKIE_MODELS_BUCKET }}
-  VOKIE_MODELS_KEY: ${{ vars.VOKIE_MODELS_KEY }}
-  VOKIE_MODELS_SHA256_KEY: ${{ vars.VOKIE_MODELS_SHA256_KEY }}
-  AWS_DEPLOY_ROLE_ARN: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
-
 jobs:
-  release:
-    name: Verify, sign, publish, and release
+  build-release-candidate:
+    name: Build unsigned VAANI release candidate
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Validate release configuration
-        env:
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: |
-          set -euo pipefail
-          test -n "$KEYSTORE_B64" || { echo 'ANDROID_KEYSTORE_BASE64 is not configured'; exit 1; }
-          test -n "$KEYSTORE_PASSWORD" || { echo 'ANDROID_KEYSTORE_PASSWORD is not configured'; exit 1; }
-          test -n "$KEY_ALIAS" || { echo 'ANDROID_KEY_ALIAS is not configured'; exit 1; }
-          test -n "$KEY_PASSWORD" || { echo 'ANDROID_KEY_PASSWORD is not configured'; exit 1; }
-          test -n "$VOKIE_MODELS_BUCKET" || { echo 'MODEL ARCHIVE NOT CONFIGURED: VOKIE_MODELS_BUCKET'; exit 1; }
-          test -n "$VOKIE_MODELS_KEY" || { echo 'MODEL ARCHIVE NOT CONFIGURED: VOKIE_MODELS_KEY'; exit 1; }
-          test -n "$VOKIE_MODELS_SHA256_KEY" || { echo 'MODEL ARCHIVE NOT CONFIGURED: VOKIE_MODELS_SHA256_KEY'; exit 1; }
-          test -n "$AWS_DEPLOY_ROLE_ARN" || { echo 'AWS_DEPLOY_ROLE_ARN is not configured'; exit 1; }
-          test -n "$AWS_REGION" || { echo 'AWS_REGION repository variable is not configured'; exit 1; }
-          test -n "$VOKIE_BUCKET" || { echo 'VOKIE_BUCKET repository variable is not configured'; exit 1; }
-          test -n "$VOKIE_CLOUDFRONT_DISTRIBUTION_ID" || { echo 'VOKIE_CLOUDFRONT_DISTRIBUTION_ID repository variable is not configured'; exit 1; }
-
-      - name: Configure AWS credentials through GitHub OIDC
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Decode release keystore
-        env:
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - run: chmod +x gradlew
+      - name: Validate and package
         run: |
-          set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/vokie-signing"
-          printf '%s' "$KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/vokie-signing/release.jks"
-          {
-            echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/vokie-signing/release.jks"
-            echo "ANDROID_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
-            echo "ANDROID_KEY_ALIAS=$KEY_ALIAS"
-            echo "ANDROID_KEY_PASSWORD=$KEY_PASSWORD"
-          } >> "$GITHUB_ENV"
-
-      - name: Make Gradle wrapper executable
-        run: chmod +x ./gradlew
-
-      - name: Download and stage verified private model archive
-        run: |
-          set -euo pipefail
-          archive="$RUNNER_TEMP/vokie-models.tar.zst"
-          checksum="$RUNNER_TEMP/vokie-models.tar.zst.sha256"
-          echo "Downloading private model archive: s3://$VOKIE_MODELS_BUCKET/$VOKIE_MODELS_KEY"
-          aws s3 cp "s3://$VOKIE_MODELS_BUCKET/$VOKIE_MODELS_KEY" "$archive" --region "$AWS_REGION"
-          aws s3 cp "s3://$VOKIE_MODELS_BUCKET/$VOKIE_MODELS_SHA256_KEY" "$checksum" --region "$AWS_REGION"
-          expected=$(awk 'NF {print $1; exit}' "$checksum")
-          actual=$(sha256sum "$archive" | awk '{print $1}')
-          test "$expected" = "$actual" || { echo 'Private model archive checksum mismatch'; exit 1; }
-          mkdir -p "$RUNNER_TEMP/vokie-models"
-          tar --zstd -xf "$archive" -C "$RUNNER_TEMP/vokie-models"
-          python3 scripts/stage-bundled-models.py "$RUNNER_TEMP/vokie-models"
-
-      - name: Audit staged ONNX models
-        run: |
-          set -euo pipefail
-          python3 -m venv "$RUNNER_TEMP/vokie-onnx-audit"
-          "$RUNNER_TEMP/vokie-onnx-audit/bin/pip" install --disable-pip-version-check onnx
+          ./gradlew :app:testDebugUnitTest :app:assembleDebug --no-daemon
           mkdir -p release
-          "$RUNNER_TEMP/vokie-onnx-audit/bin/python" scripts/audit-onnx-models.py app/src/main/assets/models --output release/models-audit.json
-          test "$(python3 -c 'import json; print(len(json.load(open("release/models-audit.json"))["models"]))')" = 10
-
-      - name: Clean
-        run: ./gradlew clean --no-daemon
-
-      - name: Unit tests
-        run: ./gradlew test --no-daemon
-
-      - name: Android lint
-        run: ./gradlew lint --no-daemon
-
-      - name: Assemble signed release APK
-        env:
-          VERSION_NAME: ${{ github.ref_name }}
-        run: |
-          set -euo pipefail
-          version="${VERSION_NAME#v}"
-          version_code=$(echo "$version" | awk -F. '{print ($1*1000000)+($2*1000)+$3}')
-          ./gradlew assembleRelease -PversionName="$version" -PversionCode="$version_code" -PproductionRelease=true --no-daemon
-          test -f app/build/outputs/apk/release/app-release.apk
-          python3 scripts/verify-bundled-model-apk.py app/build/outputs/apk/release/app-release.apk
-          mkdir -p release
-          cp app/build/outputs/apk/release/app-release.apk "release/Vokie-v${version}.apk"
-          sha256sum "release/Vokie-v${version}.apk" > "release/Vokie-v${version}.apk.sha256"
-
-      - name: Verify release APK
-        env:
-          VERSION_NAME: ${{ github.ref_name }}
-        run: |
-          set -euo pipefail
-          version="${VERSION_NAME#v}"
-          apk="release/Vokie-v${version}.apk"
-          test -f "$apk"
-          echo "APK size: $(du -h "$apk" | awk '{print $1}')"
-          sdkmanager --install "build-tools;34.0.0" >/dev/null 2>&1 || true
-          aapt_path="$ANDROID_SDK_ROOT/build-tools/34.0.0/aapt"
-          apksigner_path="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
-          "$aapt_path" dump badging "$apk" | grep -E "package:|versionName|versionCode|application-label|native-code"
-          "$apksigner_path" verify --print-certs "$apk"
-          if "$aapt_path" dump badging "$apk" | grep -q "application-debuggable"; then
-            echo "ERROR: APK is debuggable and cannot be deployed as production." >&2
-            exit 1
-          fi
-
-      - name: Extract version metadata
-        id: metadata
-        env:
-          VERSION_NAME: ${{ github.ref_name }}
-        run: |
-          set -euo pipefail
-          version="${VERSION_NAME#v}"
-          apk="release/Vokie-v${version}.apk"
-          aapt_path="$ANDROID_SDK_ROOT/build-tools/34.0.0/aapt"
-          version_code=$("$aapt_path" dump badging "$apk" | grep -oP "versionCode='\K\d+")
-          echo "version_code=$version_code" >> "$GITHUB_OUTPUT"
-          echo "version_name=$version" >> "$GITHUB_OUTPUT"
-          echo "apk_path=$apk" >> "$GITHUB_OUTPUT"
-
-      - name: Publish APK and website to AWS
-        env:
-          RELEASE_VERSION: ${{ steps.metadata.outputs.version_name }}
-          RELEASE_VERSION_CODE: ${{ steps.metadata.outputs.version_code }}
-          RELEASE_COMMIT: ${{ github.sha }}
-        run: |
-          chmod +x scripts/deploy-aws.sh
-          scripts/deploy-aws.sh "${{ steps.metadata.outputs.apk_path }}" "$RELEASE_VERSION" "$RELEASE_COMMIT" "$RELEASE_VERSION_CODE"
-
-      - name: Verify deployment
-        env:
-          DISTRIBUTION: ${{ vars.VOKIE_CLOUDFRONT_DISTRIBUTION_ID }}
-          VERSION: ${{ steps.metadata.outputs.version_name }}
-        run: |
-          set -euo pipefail
-          # Always verify S3 objects that the deploy script published.
-          aws s3api head-object --bucket "${VOKIE_BUCKET}" --key "downloads/v${VERSION}/Vokie-v${VERSION}.apk" --region "${AWS_REGION}" >/dev/null
-          aws s3api head-object --bucket "${VOKIE_BUCKET}" --key "downloads/latest/Vokie-latest.apk" --region "${AWS_REGION}" >/dev/null
-          aws s3api head-object --bucket "${VOKIE_BUCKET}" --key "release.json" --region "${AWS_REGION}" >/dev/null
-          echo "S3 deployment verified."
-
-          # Best-effort public CloudFront verification. This requires cloudfront:GetDistribution
-          # in the deployment role (added to infrastructure/iam/github-actions-deploy-policy.json).
-          domain=$(aws cloudfront get-distribution --id "$DISTRIBUTION" --query 'Distribution.DomainName' --output text 2>/dev/null || true)
-          if [ -n "$domain" ]; then
-            url="https://${domain}/release.json"
-            echo "Checking public URL $url"
-            for i in {1..12}; do
-              if curl -fsS "$url" | grep -q '"version"'; then
-                echo "Public CloudFront deployment verified."
-                curl -fsS "$url"
-                exit 0
-              fi
-              echo "Waiting for CloudFront... ($i)"
-              sleep 15
-            done
-            echo "WARNING: Public release.json not reachable yet, but S3 objects are present." >&2
-          else
-            echo "WARNING: Could not retrieve CloudFront domain (cloudfront:GetDistribution may not be applied yet). S3 objects verified."
-          fi
-
-      - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
+          cp app/build/outputs/apk/debug/app-debug.apk "release/VAANI-${{ inputs.version }}-debug.apk"
+          sha256sum "release/VAANI-${{ inputs.version }}-debug.apk" > "release/VAANI-${{ inputs.version }}-debug.apk.sha256"
+      - name: Upload release-candidate artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: iTantra ${{ github.ref_name }}
-          generate_release_notes: true
-          body: |
-            ## iTantra ${{ github.ref_name }}
+          name: vaani-${{ inputs.version }}-debug
+          path: release/
+          retention-days: 30
 
-            Offline multilingual communication for low-bitrate links.
-
-            This release was built from `${{ github.sha }}`. See the iTantra download website for the production APK and SHA-256 verification.
-          files: |
-            release/Vokie-${{ github.ref_name }}.apk
-            release/Vokie-${{ github.ref_name }}.apk.sha256
+# Production signing, GitHub releases, AWS deployment, and provider credentials are deliberately
+# absent. They are added only after a reviewed staging architecture and OIDC deployment role exist.
