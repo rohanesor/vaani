@@ -1,0 +1,6 @@
+<resources>
+    <!-- Dark values mirror client/src/styles/tokens.css :root[data-theme="dark"]. -->
+    <color name="vaani_window_bg">#0E1413</color>      <!-- CSS color background token -->
+    <color name="vaani_brand">#4CC1B2</color>          <!-- CSS brand primary token -->
+    <color name="vaani_on_brand">#03211D</color>
+</resources>

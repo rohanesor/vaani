@@ -1,5 +1,9 @@
 <resources>
-    <style name="Theme.Vaani.Starting">
-        <item name="android:windowSplashScreenBrandingImage">@drawable/vokie_splash_branding</item>
+    <!-- Android 12+ splash. Declares its parent explicitly: the previous version had none, so it
+         implicitly inherited Theme.Vaani and dropped the SplashScreen attributes on API 31+. -->
+    <style name="Theme.Vaani.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/vaani_window_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/vaani_splash_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.Vaani</item>
     </style>
 </resources>

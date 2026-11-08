@@ -16,11 +16,15 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.vokie.ui.bridge.ITantraNativeBridge
 import com.vokie.ui.communication.CommunicationViewModel
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     private var webView: WebView? = null
     private lateinit var bridge: ITantraNativeBridge
+    private var networkStatus: com.vokie.ui.bridge.NetworkStatusSource? = null
+    private var cloudState: com.vokie.ui.bridge.CloudStateSource? = null
     private val vm: CommunicationViewModel by viewModels()
 
     private val permLauncher = registerForActivityResult(
@@ -39,7 +43,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         WebView.setWebContentsDebuggingEnabled(true)
 
-        bridge = ITantraNativeBridge(vm, { webView }, lifecycleScope)
+        // VAANI UI (additive, read-only state sources): validated internet status and account-scoped cloud state.
+        networkStatus = com.vokie.ui.bridge.NetworkStatusSource(applicationContext).also { it.start() }
+        cloudState = com.vokie.ui.bridge.CloudStateSource((application as VokieApplication).database, lifecycleScope)
+        bridge = ITantraNativeBridge(vm, { webView }, lifecycleScope, networkStatus, cloudState)
 
         val wv = WebView(this).apply {
             layoutParams = ViewGroup.LayoutParams(
@@ -55,7 +62,8 @@ class MainActivity : ComponentActivity() {
                 useWideViewPort = true
                 loadWithOverviewMode = true
             }
-            setBackgroundColor(android.graphics.Color.parseColor("#111111"))
+            // VAANI: match tokens.css --color-bg for the current light/dark theme (values / values-night).
+            setBackgroundColor(getColor(R.color.vaani_window_bg))
             addJavascriptInterface(bridge, "ITantraNative")
             webChromeClient = object : WebChromeClient() {
                 override fun onConsoleMessage(cm: ConsoleMessage?): Boolean {
@@ -106,6 +114,30 @@ class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             vm.aiAssistant.collect { bridge.pushStateUpdate() }
         }
+        // VAANI UI (additive): push state when settings, cloud and speech status change, so the
+        // WebView never has to guess. These only trigger re-renders; they change no behaviour.
+        lifecycleScope.launch { vm.settingsRepository.identity.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.settingsRepository.languagePreference.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.ttsSpeed.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.cloudUser.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.cloudSyncEnabled.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.cloudSyncState.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.messageTtsStates.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.installedTtsLanguages.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { vm.sttStatus.map { it.state }.distinctUntilChanged().collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { networkStatus?.status?.collect { bridge.pushStateUpdate() } }
+        lifecycleScope.launch { cloudState?.snapshot?.collect { bridge.pushStateUpdate() } }
+    }
+
+    override fun onDestroy() {
+        networkStatus?.stop()
+        super.onDestroy()
+    }
+
+    override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // uiMode is in configChanges, so the activity is not recreated on a light/dark switch.
+        webView?.setBackgroundColor(getColor(R.color.vaani_window_bg))
     }
 
     override fun onNewIntent(intent: Intent) {

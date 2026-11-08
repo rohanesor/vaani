@@ -1,3 +1,11 @@
 <resources>
+    <!-- Legacy iTantra launcher background, kept for the old artwork; no longer referenced by the manifest. -->
     <color name="vokie_bg_base">#111111</color>
+
+    <!-- VAANI. Values mirror client/src/styles/tokens.css (light). Dark values live in values-night. -->
+    <color name="vaani_window_bg">#F3F1EB</color>      <!-- CSS color background token -->
+    <color name="vaani_brand">#0B6E63</color>          <!-- CSS brand primary token (Peacock) -->
+    <color name="vaani_on_brand">#FFFFFF</color>
+    <!-- Launcher icon background: fixed Peacock in both themes. -->
+    <color name="vaani_launcher_bg">#0B6E63</color>
 </resources>

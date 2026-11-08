@@ -1,0 +1,8 @@
+<resources>
+    <!-- Dark theme (uiMode night outranks the API-level qualifiers, so this wins over values-v27). -->
+    <style name="Theme.Vaani" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/vaani_window_bg</item>
+        <item name="android:navigationBarColor">@color/vaani_window_bg</item>
+        <item name="android:windowBackground">@color/vaani_window_bg</item>
+    </style>
+</resources>

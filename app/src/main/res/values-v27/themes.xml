@@ -1,0 +1,10 @@
+<resources>
+    <!-- API 27+: light navigation bar icons are available. -->
+    <style name="Theme.Vaani" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/vaani_window_bg</item>
+        <item name="android:navigationBarColor">@color/vaani_window_bg</item>
+        <item name="android:windowBackground">@color/vaani_window_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

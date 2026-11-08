@@ -37,9 +37,9 @@
     <application
         android:name=".VokieApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_vaani"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_vaani"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vaani"
         tools:targetApi="31">
@@ -49,6 +49,7 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Vaani.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

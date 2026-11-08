@@ -18,7 +18,23 @@ class ITantraNativeBridge(
     private val vm: CommunicationViewModel,
     private val webViewProvider: () -> WebView?,
     private val scope: CoroutineScope,
+    // VAANI UI (additive, read-only): see docs/ANDROID_BRIDGE_STATE_CONTRACT.md.
+    private val networkStatus: NetworkStatusSource? = null,
+    private val cloudState: CloudStateSource? = null,
 ) {
+
+    /** Read-only: choose which cached cloud conversation's messages are exported. No network, no writes. */
+    @JavascriptInterface
+    fun onOpenCloudConversation(cloudConversationId: String) {
+        cloudConversationId.toLongOrNull()?.let { cloudState?.openCloudConversation(it) }
+        pushStateUpdate()
+    }
+
+    @JavascriptInterface
+    fun onCloseCloudConversation() {
+        cloudState?.closeCloudConversation()
+        pushStateUpdate()
+    }
 
     @JavascriptInterface
     fun onPttDown() {
@@ -259,6 +275,16 @@ class ITantraNativeBridge(
             put("email", cloud?.email ?: JSONObject.NULL)
             put("syncEnabled", vm.cloudSyncEnabled.value)
             put("syncState", vm.cloudSyncState.value.javaClass.simpleName)
+            // VAANI UI (additive): AuthClient and SyncApiClient use AI_BACKEND_BASE_URL.
+            put("configured", com.vokie.BuildConfig.AI_BACKEND_BASE_URL.isNotBlank())
+            put("lastSyncedAt", cloud?.lastSyncedAt ?: JSONObject.NULL)
+        })
+        // VAANI UI (additive): validated internet status, kept separate from nearby connectivity.
+        val net = networkStatus?.status?.value
+        root.put("network", if (net == null) JSONObject.NULL else JSONObject().apply {
+            put("state", net.state)
+            put("transport", net.transport ?: JSONObject.NULL)
+            put("metered", net.metered)
         })
         root.put("ai", JSONObject().apply {
             val ai = vm.aiAssistant.value
@@ -266,6 +292,17 @@ class ITantraNativeBridge(
             put("error", ai.error ?: JSONObject.NULL)
             put("text", ai.response?.text ?: JSONObject.NULL)
             put("actionsRequireConfirmation", ai.response?.actions?.all { it.requiresConfirmation } ?: true)
+        })
+        // VAANI UI (additive): lets the WebView explain unavailable AI instead of failing on tap.
+        root.put("aiConfigured", com.vokie.BuildConfig.AI_BACKEND_BASE_URL.isNotBlank())
+        // VAANI UI (additive): on-device speech status so the language picker shows real availability.
+        root.put("speech", JSONObject().apply {
+            put("sttState", vm.sttStatus.value.state.name)
+            put("ttsInstalled", JSONArray().apply { vm.installedTtsLanguages.value.forEach { put(it.messageLanguage.code) } })
+        })
+        // VAANI UI (additive): real per-message playback state (QUEUED/SYNTHESIZING/PLAYING/COMPLETED/FAILED).
+        root.put("messageAudio", JSONObject().apply {
+            vm.messageTtsStates.value.forEach { (id, state) -> put(id, state.name) }
         })
         // User-configured language and TTS speed.
         root.put("language", vm.settingsRepository.languagePreference.value.speakLanguage.code)
@@ -378,6 +415,25 @@ class ITantraNativeBridge(
         }
         root.put("wifiDirectPeers", wifiPeers)
 
+        // VAANI UI (additive): nearby counts are reported separately, never combined.
+        val outgoingRequests = peers.pendingRequests.filter { it.senderPeerId == vm.deviceId }
+        root.put("nearby", JSONObject().apply {
+            put("discovered", peers.discoveredPeers.count { it.connectionState != PeerConnectionState.ACTIVE })
+            put("connected", activeCount)
+            put("trusted", peers.trustedPeers.size)
+            put("pairingIncoming", peers.pendingRequests.count { it.receiverPeerId == vm.deviceId })
+            put("pairingOutgoing", outgoingRequests.size)
+        })
+        root.put("outgoingPairRequests", JSONArray().apply {
+            outgoingRequests.forEach { r ->
+                put(JSONObject().apply {
+                    put("requestId", r.requestId)
+                    put("peerId", r.receiverPeerId)
+                    put("name", peers.discoveredPeers.find { it.peerId == r.receiverPeerId }?.displayName ?: JSONObject.NULL)
+                })
+            }
+        })
+
         // Incoming pair request
         val pendingReq = peers.pendingRequests.firstOrNull { it.receiverPeerId == vm.deviceId }
         if (pendingReq != null) {
@@ -385,7 +441,7 @@ class ITantraNativeBridge(
             reqObj.put("requestId", pendingReq.requestId)
             reqObj.put("senderPeerId", pendingReq.senderPeerId)
             val sender = peers.discoveredPeers.find { it.peerId == pendingReq.senderPeerId }
-            reqObj.put("displayName", sender?.displayName ?: "iTantra Peer")
+            reqObj.put("displayName", sender?.displayName ?: "Nearby peer")
             reqObj.put("initial", (sender?.displayName ?: "A").take(1).uppercase())
             root.put("incomingPairRequest", reqObj)
         } else {
@@ -393,6 +449,7 @@ class ITantraNativeBridge(
         }
 
         // Conversations
+        val cloudSnapshot = cloudState?.snapshot?.value
         val convArray = JSONArray()
         messages.conversations.forEach { conv ->
             val peer = peers.discoveredPeers.find { it.peerId == conv.peerId }
@@ -407,9 +464,57 @@ class ITantraNativeBridge(
             obj.put("lastMessage", lastMsg?.text ?: "")
             obj.put("time", lastMsg?.timestamp ?: conv.updatedAt)
             obj.put("unreadCount", conv.unreadCount)
+            // VAANI UI (additive): origin and sync from account-scoped cloud_id_mapping records.
+            val link = cloudSnapshot?.links?.get(conv.conversationId)
+            obj.put("origin", if (link != null) "cloud-linked" else "nearby")
+            obj.put("sync", if (link == null) JSONObject.NULL else JSONObject().apply {
+                put("cloudId", link.cloudId)
+                put("pending", link.pending)
+                put("failed", link.failed)
+                put("synced", link.synced)
+            })
             convArray.put(obj)
         }
         root.put("conversations", convArray)
+
+        // VAANI UI (additive): cloud conversations stored on this phone and not linked locally (read-only).
+        val cloudArray = JSONArray()
+        cloudSnapshot?.cloudOnly?.forEach { c ->
+            cloudArray.put(JSONObject().apply {
+                put("cloudId", c.cloudId)
+                put("kind", c.kind)
+                put("title", c.title ?: JSONObject.NULL)
+                put("members", JSONArray(c.members))
+                put("updatedAt", c.updatedAt)
+                put("lastMessage", c.lastMessage?.let { m ->
+                    JSONObject().apply {
+                        put("body", if (m.deletedAt != null) JSONObject.NULL else (m.body ?: JSONObject.NULL))
+                        put("senderName", m.senderName)
+                        put("kind", m.kind)
+                        put("createdAt", m.createdAt)
+                    }
+                } ?: JSONObject.NULL)
+            })
+        }
+        root.put("cloudConversations", cloudArray)
+        val cloudChat = cloudSnapshot?.chat
+        root.put("cloudChat", if (cloudChat == null) JSONObject.NULL else JSONObject().apply {
+            put("cloudId", cloudChat.cloudId)
+            put("messages", JSONArray().apply {
+                cloudChat.messages.forEach { m ->
+                    put(JSONObject().apply {
+                        put("cloudId", m.cloudId)
+                        put("senderName", m.senderName)
+                        put("isMine", m.senderCloudId != null && m.senderCloudId == cloudSnapshot?.accountId)
+                        put("kind", m.kind)
+                        put("body", if (m.deletedAt != null) JSONObject.NULL else (m.body ?: JSONObject.NULL))
+                        put("sourceLanguage", m.sourceLanguage ?: JSONObject.NULL)
+                        put("createdAt", m.createdAt)
+                        put("deleted", m.deletedAt != null)
+                    })
+                }
+            })
+        })
 
         // Chat messages for active conversation
         val chat = vm.chatUiState.value
@@ -427,6 +532,9 @@ class ITantraNativeBridge(
             val isUrgent = m.semanticMetadata?.urgency in setOf(SemanticUrgency.URGENT, SemanticUrgency.CRITICAL) || m.priority >= 2
             obj.put("urgent", isUrgent)
             obj.put("semanticLabel", m.semanticMetadata?.displayLabel() ?: JSONObject.NULL)
+            // VAANI UI (additive): receiver-local translation, already stored on the message.
+            obj.put("translatedText", m.translatedText ?: JSONObject.NULL)
+            obj.put("translatedLanguage", m.translatedLanguage ?: JSONObject.NULL)
             chatArray.put(obj)
         }
         root.put("chatMessages", chatArray)

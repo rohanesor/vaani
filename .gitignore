@@ -90,3 +90,7 @@ google-services.json
 *.pt
 *.pth
 *.safetensors
+
+# Local credentials and generated comparison output
+/gnani.txt
+/Claude outputs/

@@ -177,7 +177,21 @@ interface CloudIdMappingDao {
 
     @Query("DELETE FROM cloud_id_mapping WHERE accountCloudUserId = :accountId")
     suspend fun clearAccount(accountId: Long)
+
+    // Read-only observers for the WebView UI (docs/ANDROID_BRIDGE_STATE_CONTRACT.md). No schema change.
+    @Query("SELECT * FROM cloud_id_mapping WHERE accountCloudUserId = :accountId AND localType = 'conversation' AND cloudId IS NOT NULL")
+    fun observeConversationLinks(accountId: Long): Flow<List<CloudIdMappingEntity>>
+
+    @Query("SELECT messages.conversationId AS conversationId, cloud_id_mapping.syncStatus AS syncStatus, COUNT(*) AS count FROM cloud_id_mapping INNER JOIN messages ON messages.id = cloud_id_mapping.localId WHERE cloud_id_mapping.accountCloudUserId = :accountId AND cloud_id_mapping.localType = 'message' GROUP BY messages.conversationId, cloud_id_mapping.syncStatus")
+    fun observeMessageSyncCounts(accountId: Long): Flow<List<ConversationSyncCount>>
 }
+
+/** Query result: number of account-scoped message mappings per local conversation and sync status. */
+data class ConversationSyncCount(
+    val conversationId: String?,
+    val syncStatus: String,
+    val count: Int,
+)
 
 @Dao
 interface CloudConversationDao {
