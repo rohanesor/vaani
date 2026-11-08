@@ -110,6 +110,14 @@ android {
 
 // Release assets are staged by scripts/stage-bundled-models.py from a protected archive.
 // Never add model binaries to Git; a production APK without all assets is invalid.
+// The scripted code-switch corpus is intentionally kept out of the published repository.
+// CI can exclude only its replay suite while preserving all independently reproducible JVM tests.
+tasks.withType<Test>().configureEach {
+    if (providers.gradleProperty("excludeProtectedCorpusTests").isPresent) {
+        exclude("com/vokie/translation/CodeSwitchCorpusReplayTest.*")
+    }
+}
+
 tasks.configureEach {
     if (name == "assembleRelease" || name == "bundleRelease") {
         doFirst {

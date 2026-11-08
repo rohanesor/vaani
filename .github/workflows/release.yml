@@ -31,7 +31,7 @@ jobs:
       - run: chmod +x gradlew
       - name: Validate and package
         run: |
-          ./gradlew :app:testDebugUnitTest :app:assembleDebug --no-daemon
+          ./gradlew :app:testDebugUnitTest :app:assembleDebug --no-daemon -PexcludeProtectedCorpusTests
           mkdir -p release
           cp app/build/outputs/apk/debug/app-debug.apk "release/VAANI-${{ inputs.version }}-debug.apk"
           sha256sum "release/VAANI-${{ inputs.version }}-debug.apk" > "release/VAANI-${{ inputs.version }}-debug.apk.sha256"
