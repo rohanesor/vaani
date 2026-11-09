@@ -4,6 +4,10 @@
 
 VAANI is an AI-native multilingual messaging app: 1:1 and group chat, voice notes with transcription, one-tap translation into your language, and an AI companion that suggests replies, rewrites drafts, explains messages, answers questions about the chat, summarises, and turns plans into calendar events and tasks. It never sends anything for you.
 
+## Mobile reel
+
+[▶ Watch the VAANI mobile reel (9:16)](https://dw9spbvgfnm1v.cloudfront.net/media/VAANI-v7-final-9x16.mp4) · [Download MP4](https://dw9spbvgfnm1v.cloudfront.net/media/VAANI-v7-final-9x16.mp4)
+
 | | |
 |---|---|
 | Client | React 19 + Vite + TypeScript (`client/`) — responsive web app, phone to desktop, light/dark |
